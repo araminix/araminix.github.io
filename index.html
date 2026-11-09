@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src https://api.github.com https://api.npmjs.org; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>Araminix · streaming runtimes, real-time platforms and energy software</title>
+<meta name="description" content="Araminix builds open-source streaming runtimes, real-time actor platforms and engineering tools for power plants: plantline, @araminix/platform and @araminix/lib.">
+<link rel="canonical" href="https://araminix.github.io/">
+<meta name="theme-color" content="#070b14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="assets/img/icon-64.png">
+<link rel="apple-touch-icon" href="assets/img/icon-180.png">
+<link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/site.js" defer></script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://araminix.github.io/">
+<meta property="og:title" content="Araminix · Where serenity meets speed.">
+<meta property="og:description" content="Araminix builds open-source streaming runtimes, real-time actor platforms and engineering tools for power plants: plantline, @araminix/platform and @araminix/lib.">
+<meta property="og:image" content="https://araminix.github.io/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Araminix","url":"https://araminix.github.io/","logo":"https://araminix.github.io/assets/img/icon-180.png","description":"Araminix builds open-source streaming runtimes, real-time actor platforms and engineering tools for power plants: plantline, @araminix/platform and @araminix/lib.","founder":{"@type":"Person","name":"Amin Abbasi","url":"https://amin-abbasi.github.io/"},"sameAs":["https://github.com/araminix","https://www.npmjs.com/org/araminix"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><img src="assets/img/icon-64.png" width="34" height="34" alt="">Araminix</a>
+    <nav class="nav-links" aria-label="Sections"><a href="#products">Products</a><a href="#capabilities">Capabilities</a><a href="#open-source">Open source</a><a href="#founder">Founder</a><a href="#contact">Contact</a></nav>
+    <div class="nav-tools">
+      <button class="icon-btn" id="theme" type="button" aria-label="Switch between light and dark"><svg class="icon only-dark" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="icon only-light" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg></button>
+      <a class="btn small" href="https://github.com/araminix" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub</a>
+      <button class="icon-btn menu-btn" id="menu" type="button" aria-label="Sections" aria-expanded="false" aria-controls="mobile-nav"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Sections" hidden><a href="#products">Products</a><a href="#capabilities">Capabilities</a><a href="#open-source">Open source</a><a href="#founder">Founder</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="hero-text">
+      <p class="eyebrow"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Open-source engineering from Türkiye</p>
+      <h1>Where serenity <span class="grad">meets speed.</span></h1>
+      <p class="lead">Araminix builds trusted, zero-crash streaming runtimes, real-time actor ecosystems and engineering software for the energy industry. Everything is open source, typed end to end, tested at every level and documented like a product.</p>
+      <div class="actions"><a class="btn primary big" href="#products">Explore the products<svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a class="btn big" href="https://github.com/araminix" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>github.com/araminix</a></div>
+    </div>
+    
+<div class="orbit" aria-hidden="true">
+  <svg viewBox="0 0 520 520" class="orbit-rings">
+    <defs><radialGradient id="glow"><stop offset="0" stop-color="var(--glow-a)" stop-opacity=".55"/><stop offset="1" stop-color="var(--glow-b)" stop-opacity="0"/></radialGradient></defs>
+    <circle cx="260" cy="260" r="250" fill="url(#glow)"/>
+    <circle cx="260" cy="260" r="235" class="ring"/>
+    <circle cx="260" cy="260" r="175" class="ring dashed"/>
+    <circle cx="260" cy="260" r="115" class="ring"/>
+    <g class="spin slow"><circle cx="260" cy="25" r="6" class="dot a"/><circle cx="495" cy="260" r="4" class="dot b"/><circle cx="94" cy="426" r="5" class="dot c"/></g>
+    <g class="spin fast"><circle cx="260" cy="85" r="5" class="dot b"/><circle cx="111" cy="347" r="4" class="dot a"/></g>
+  </svg>
+  <img src="assets/img/logo-400.webp" alt="" class="orbit-logo" width="200" height="200">
+  <span class="chip c1"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.9 16.1C1 12.2 1 5.8 4.9 1.9"/><path d="M7.8 4.7a6.14 6.14 0 0 0-.8 7.5"/><circle cx="12" cy="9" r="2"/><path d="M16.2 4.8c2 2 2.26 5.11.8 7.47"/><path d="M19.1 1.9a9.96 9.96 0 0 1 0 14.1"/><path d="M9.5 18h5"/><path d="m8 22 4-11 4 11"/></svg>Streams</span>
+  <span class="chip c2"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg>Actors</span>
+  <span class="chip c3"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z"/><path d="M17 21v-2"/><path d="M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10"/><path d="M21 21v-2"/><path d="M3 5V3"/><path d="M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z"/><path d="M7 5V3"/></svg>Agents</span>
+  <span class="chip c4"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg>plantline</span>
+</div>
+  </div>
+  <div class="wrap"><dl class="stats"><div><dt>open-source products</dt><dd>3</dd></div><div><dt>npm downloads last month</dt><dd data-live="npm-total">2.3k+</dd></div><div><dt>automated tests across the stack</dt><dd>400+</dd></div><div><dt>languages in plantline</dt><dd>14</dd></div></dl></div>
+</section>
+
+<section class="section" id="products">
+  <div class="wrap">
+    <header class="section-head"><p class="eyebrow">Products</p><h2>Three products, one standard</h2><p>A tool engineers use every day, and the runtime and protocol underneath real-time applications: each built to the same bar of typing, testing and documentation.</p></header>
+    
+<article class="product" id="plantline">
+  <div class="product-text">
+    <p class="kind">Web app · Energy engineering</p>
+    <h3>plantline</h3>
+    <p class="product-tagline">Single-line diagrams and DWG/DXF plant layouts, in the browser.</p>
+    <p>A free tool for the people who design, build and run power plants. Draw the plant's single-line diagram, open its AutoCAD drawing and see the plant on the map with its tables, inverters, turbines, towers and cables found and counted. No account and no server: drawings are read in the browser and never leave it.</p>
+    <ul class="points"><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>A real diagram editor.</b> 23 IEC 60617 symbols, drag and drop, connection points, shaped line routes, group editing, properties for every kind of equipment and design checks.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>AutoCAD in the browser.</b> DWG and DXF read by a .NET reader compiled ahead of time to WebAssembly: a 7.5 MB plant with 27,000 block copies opens in about 3.5 seconds.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>On the map.</b> In the drawing's own coordinates (UTM or any proj4 system) or by a click; objects counted, lengths measured and capacity worked out from the modules.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>For everyone.</b> 14 languages with Arabic and Persian right to left, light and dark themes, phones and tablets, and no tracking.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Measured in CI.</b> Unit, reader and end-to-end tests on desktop and phone, with limits on reading time, memory and download size.</span></li></ul>
+    <ul class="chips"><li class="chip">React 19</li><li class="chip">TypeScript</li><li class="chip">.NET 10 → WebAssembly</li><li class="chip">ACadSharp</li><li class="chip">Leaflet</li><li class="chip">proj4</li><li class="chip">Vite</li><li class="chip">Vitest</li><li class="chip">Playwright</li></ul>
+    <div class="meta">
+      <span hidden><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="araminix/plantline"></b> <span class="unit">stars</span></span>
+      <span><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>free, in any browser</span>
+    </div>
+    <div class="actions"><a class="btn primary" href="https://araminix.github.io/plantline/" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>Open the app</a><a class="btn" href="https://github.com/araminix/plantline" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>Source</a></div>
+  </div>
+  <div class="product-media reveal">
+<div class="shots">
+  <figure class="frame back"><img src="assets/img/plantline/layout.webp" alt="plantline's plant layout: a solar plant on satellite imagery with an inverter described" width="1440" height="900" loading="lazy"></figure>
+  <figure class="frame front">
+    <img class="only-light" src="assets/img/plantline/diagram.webp" alt="plantline's diagram editor: a solar plant's single-line diagram with a transformer's properties" width="1440" height="900" loading="lazy">
+    <img class="only-dark" src="assets/img/plantline/dark.webp" alt="plantline's diagram editor in the dark theme with the diagram's checks" width="1440" height="900" loading="lazy">
+  </figure>
+  <figure class="frame phone"><img src="assets/img/plantline/phone.webp" alt="plantline on a phone, in Persian, right to left" width="412" height="839" loading="lazy"></figure>
+</div></div>
+</article>
+<article class="product flip" id="platform">
+  <div class="product-text">
+    <p class="kind">npm package · Node.js runtime</p>
+    <h3>@araminix/platform</h3>
+    <p class="product-tagline">An actor-based application runtime and WebSocket platform for Node.js.</p>
+    <p>Write applications as TypeScript classes. The platform runs every opened app in its own worker thread, streams the UI tree and its updates to the browser over multiplexed WebSocket streams, and routes commands between apps and external agents such as devices or services.</p>
+    <ul class="points"><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>One worker per app.</b> Each app instance runs in its own worker thread with memory limits, timeouts and forced termination: one app cannot take the server down.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Server-driven UI on actors.</b> Pages return actors instead of touching the UI; updates are applied under a per-instance lock, so actions, timers and requests never interleave.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Agents.</b> External processes connect as agents, each served by its own worker, exchanging typed tasks and messages with the apps.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Hardened endpoint.</b> Signed httpOnly sessions, a CSRF guard, origin checks, rate-limited sign-in, two-factor hooks, verified Google sign-in, safe uploads and presigned S3/MinIO links.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>No exceptions in the API.</b> Every fallible call returns a Result; error codes reach clients, error objects only reach the log.</span></li></ul>
+    <ul class="chips"><li class="chip">Node.js 22+</li><li class="chip">TypeScript</li><li class="chip">Express 5</li><li class="chip">WebSocket</li><li class="chip">worker_threads</li><li class="chip">MinIO / S3</li><li class="chip">io-ts</li><li class="chip">node:test</li></ul>
+    <div class="meta">
+      <span hidden><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="araminix/platform"></b> <span class="unit">stars</span></span>
+      <span><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>v2.4.1</span><span hidden><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg><b data-npm="@araminix/platform"></b> downloads last month</span>
+    </div>
+    <div class="actions"><a class="btn primary" href="https://www.npmjs.com/package/@araminix/platform" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>npm</a><a class="btn" href="https://github.com/araminix/platform" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>Source</a></div>
+  </div>
+  <div class="product-media reveal"><div class="art-card">
+<svg viewBox="0 0 600 380" class="art" role="img" aria-label="Browsers connect through a hardened endpoint; every app runs in its own worker thread; agents connect through workers of their own">
+  <g class="art-box "><rect x="12" y="40" width="108" height="70" rx="12"/><text x="26" y="64" class="art-t">Browser</text><text x="26" y="82" class="art-s">user A</text></g>
+  <g class="art-box "><rect x="12" y="128" width="108" height="70" rx="12"/><text x="26" y="152" class="art-t">Browser</text><text x="26" y="170" class="art-s">user B</text></g>
+  <g class="art-box "><rect x="12" y="268" width="108" height="70" rx="12"/><text x="26" y="292" class="art-t">Device</text><text x="26" y="310" class="art-s">or service</text></g>
+  <g class="art-box "><rect x="150" y="40" width="130" height="158" rx="12"/><text x="164" y="64" class="art-t">Endpoint</text><text x="164" y="82" class="art-s">sessions · 2FA</text></g>
+  <text x="164" y="120" class="art-s">CSRF guard</text><text x="164" y="140" class="art-s">origin checks</text><text x="164" y="160" class="art-s">rate limits</text><text x="164" y="180" class="art-s">uploads</text>
+  <g class="art-box "><rect x="150" y="268" width="130" height="70" rx="12"/><text x="164" y="292" class="art-t">Agent link</text><text x="164" y="310" class="art-s">x-token</text></g>
+  <g class="art-box outer"><rect x="312" y="18" width="270" height="344" rx="12"/><text x="326" y="42" class="art-t">Platform</text><text x="326" y="60" class="art-s">main thread routes streams</text></g>
+  <g class="art-box worker"><rect x="330" y="78" width="234" height="52" rx="10"/><text x="344" y="100" class="art-t">App · worker 1</text><text x="344" y="118" class="art-s">$open · $patch · $next</text><circle cx="544" cy="104" r="6" class="live"/></g><g class="art-box worker"><rect x="330" y="144" width="234" height="52" rx="10"/><text x="344" y="166" class="art-t">App · worker 2</text><text x="344" y="184" class="art-s">$open · $patch · $next</text><circle cx="544" cy="170" r="6" class="live"/></g><g class="art-box worker"><rect x="330" y="210" width="234" height="52" rx="10"/><text x="344" y="232" class="art-t">App · worker 3</text><text x="344" y="250" class="art-s">$open · $patch · $next</text><circle cx="544" cy="236" r="6" class="live"/></g>
+  <g class="art-box worker agent"><rect x="330" y="282" width="234" height="52" rx="10"/><text x="344" y="304" class="art-t">Agent · worker</text><text x="344" y="322" class="art-s">tasks and messages</text></g>
+  <path d="M120 75 H150 M120 163 H150 M280 100 H330 M280 166 H330 M280 232 H330 M120 303 H150 M280 303 H330" class="wire"/>
+</svg></div></div>
+</article>
+<article class="product" id="lib">
+  <div class="product-text">
+    <p class="kind">npm package · Browser and Node.js</p>
+    <h3>@araminix/lib</h3>
+    <p class="product-tagline">Universal, type-safe multiplexed WebSocket streaming.</p>
+    <p>The communication layer of the Araminix stack: any number of independent, typed, bidirectional streams over a single WebSocket, kept alive across network drops, with every failure reported as a Result instead of an exception. The same code runs in browsers and in Node.js.</p>
+    <ul class="points"><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Multiplexed streams.</b> Each stream has a name, typed arguments, typed messages both ways, its own lifecycle and bounded queues.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Resilient by design.</b> Reconnects with exponential backoff and jitter, resumes on the new socket and detects dead peers with per-stream heartbeats.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Validated protocol.</b> Every frame is checked against an io-ts codec; malformed frames are dropped.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Isomorphic.</b> Native WebSocket in browsers and Node.js 22+, no polyfills, ESM with types and declaration maps.</span></li></ul>
+    <ul class="chips"><li class="chip">TypeScript</li><li class="chip">WebSocket</li><li class="chip">io-ts</li><li class="chip">fp-ts</li><li class="chip">ESM</li><li class="chip">node:test</li></ul>
+    <div class="meta">
+      <span hidden><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="araminix/lib"></b> <span class="unit">stars</span></span>
+      <span><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>v3.1.0</span><span hidden><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg><b data-npm="@araminix/lib"></b> downloads last month</span>
+    </div>
+    <div class="actions"><a class="btn primary" href="https://www.npmjs.com/package/@araminix/lib" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>npm</a><a class="btn" href="https://github.com/araminix/lib" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>Source</a></div>
+  </div>
+  <div class="product-media reveal"><div class="art-card">
+<svg viewBox="0 0 600 360" class="art" role="img" aria-label="Typed streams, each with its own direction, share one WebSocket between a client and the server">
+  <g class="art-box "><rect x="16" y="40" width="150" height="250" rx="12"/><text x="30" y="64" class="art-t">Client</text><text x="30" y="82" class="art-s">browser or Node.js</text></g>
+  <g class="art-box "><rect x="434" y="40" width="150" height="250" rx="12"/><text x="448" y="64" class="art-t">Server</text><text x="448" y="82" class="art-s">@araminix/platform</text></g>
+  <rect x="166" y="92" width="268" height="168" rx="26" class="pipe"/>
+  <text x="300" y="82" class="art-s mid">one WebSocket</text>
+  
+  <line x1="152" y1="122" x2="448" y2="122" class="lane a both"/>
+  <circle cx="152" cy="122" r="5" class="end a"/><circle cx="448" cy="122" r="5" class="end a"/>
+  <text x="30" y="126" class="art-s">chat ⇄</text>
+  <line x1="152" y1="156" x2="448" y2="156" class="lane b out"/>
+  <circle cx="152" cy="156" r="5" class="end b"/><circle cx="448" cy="156" r="5" class="end b"/>
+  <text x="30" y="160" class="art-s">ask →</text>
+  <line x1="152" y1="190" x2="448" y2="190" class="lane c in"/>
+  <circle cx="152" cy="190" r="5" class="end c"/><circle cx="448" cy="190" r="5" class="end c"/>
+  <text x="30" y="194" class="art-s">notifications ←</text>
+  <line x1="152" y1="224" x2="448" y2="224" class="lane d out"/>
+  <circle cx="152" cy="224" r="5" class="end d"/><circle cx="448" cy="224" r="5" class="end d"/>
+  <text x="30" y="228" class="art-s">files →</text>
+  <g class="art-note"><rect x="120" y="300" width="360" height="40" rx="20"/><text x="300" y="325" class="art-s mid">heartbeats · resumable reconnects · Result&lt;T, E&gt;</text></g>
+</svg><pre class="code" aria-label="A stream opened over a socket"><code><span class="k">const</span> socket = (<span class="k">await</span> client.<span class="f">connect</span>(<span class="s">'chat'</span>, <span class="s">'room-42'</span>)).<span class="f">unwrap</span>();
+<span class="k">const</span> opened = <span class="k">await</span> socket.<span class="f">outgoingStream</span>&lt;<span class="t">Topic</span>, <span class="t">string</span>, <span class="t">string</span>&gt;(
+    <span class="s">'ask'</span>, { topic: <span class="s">'weather'</span> });
+<span class="k">if</span> (opened.<span class="f">isOk</span>()) {
+    <span class="k">const</span> stream = opened.<span class="f">unwrap</span>();
+    <span class="k">await</span> stream.<span class="f">write</span>(<span class="s">'Will it rain tomorrow?'</span>);
+    <span class="c">// Result&lt;string, StreamErr&gt;, never a throw</span>
+    <span class="k">const</span> answer = <span class="k">await</span> stream.<span class="f">read</span>(<span class="n">10</span>);
+}</code></pre></div></div>
+</article>
+    <aside class="stack-note reveal"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg><p><b>How they fit together.</b> <code>@araminix/lib</code> is the wire: typed streams over one WebSocket, in the browser and in Node.js. <code>@araminix/platform</code> is the server built on it: apps in their own workers, a server-driven UI, and agents for devices and services. plantline shows the same care in a product engineers use directly.</p></aside>
+  </div>
+</section>
+
+<section class="section alt" id="capabilities">
+  <div class="wrap">
+    <header class="section-head"><p class="eyebrow">Capabilities</p><h2>What we build</h2><p>From the wire protocol to the screen an engineer works on.</p></header>
+    <div class="grid three"><article class="card reveal"><span class="card-icon"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.9 16.1C1 12.2 1 5.8 4.9 1.9"/><path d="M7.8 4.7a6.14 6.14 0 0 0-.8 7.5"/><circle cx="12" cy="9" r="2"/><path d="M16.2 4.8c2 2 2.26 5.11.8 7.47"/><path d="M19.1 1.9a9.96 9.96 0 0 1 0 14.1"/><path d="M9.5 18h5"/><path d="m8 22 4-11 4 11"/></svg></span><h3>Real-time systems</h3><p>Multiplexed WebSocket protocols, actor runtimes and streaming pipelines that keep their promises under load and across network drops.</p></article><article class="card reveal"><span class="card-icon"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span><h3>Resilient backends</h3><p>Worker isolation, backpressure, timeouts and typed results instead of exceptions, in Node.js, Go and .NET.</p></article><article class="card reveal"><span class="card-icon"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg></span><h3>Software for energy</h3><p>Single-line diagrams, DWG/DXF processing and GIS placement for solar, wind, storage, hydro and grid projects.</p></article><article class="card reveal"><span class="card-icon"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Security by design</h3><p>Hardened sessions and uploads, content security policies, audits and their fixes, shipped as part of the work, not after it.</p></article><article class="card reveal"><span class="card-icon"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></span><h3>The modern web platform</h3><p>WebAssembly, canvas and SVG rendering at scale, right-to-left languages, and privacy by default.</p></article><article class="card reveal"><span class="card-icon"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 7 6.82 21.18a2.83 2.83 0 0 1-3.99-.01a2.83 2.83 0 0 1 0-4L17 3"/><path d="m16 2 6 6"/><path d="M12 16H4"/></svg></span><h3>Quality you can measure</h3><p>Tests at every level, CI limits on time, memory and size, and documentation written as part of the product.</p></article></div>
+    <h3 class="sub-head">How we work</h3>
+    <ul class="principles"><li class="reveal"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16c5 0 7-8 12-8a4 4 0 0 1 0 8c-5 0-7-8-12-8a4 4 0 1 0 0 8"/></svg><div><b>Zero crashes by design</b><span>Failures are values, isolated and recovered from, never surprises.</span></div></li><li class="reveal"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></svg><div><b>Typed end to end</b><span>From the wire format to the UI, the compiler checks the contract.</span></div></li><li class="reveal"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg><div><b>Measured, not guessed</b><span>Real files and real numbers before and after every change.</span></div></li><li class="reveal"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg><div><b>Secure by default</b><span>Nothing leaves the user's device unless it has to.</span></div></li><li class="reveal"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/><path d="M8 11h8"/><path d="M8 7h6"/></svg><div><b>Documented like a product</b><span>Every package ships a full guide and API reference.</span></div></li><li class="reveal"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg><div><b>Open by default</b><span>MIT and Apache licences, changelogs and a history anyone can review.</span></div></li></ul>
+  </div>
+</section>
+
+<section class="section" id="stack">
+  <div class="wrap">
+    <header class="section-head"><p class="eyebrow">Technology</p><h2>The tools we know well</h2></header>
+    <div class="stack"><div class="stack-row reveal"><h3>Languages</h3><ul class="chips"><li class="chip">TypeScript</li><li class="chip">JavaScript</li><li class="chip">C# / .NET</li><li class="chip">Go</li><li class="chip">Python</li></ul></div><div class="stack-row reveal"><h3>Runtimes and frameworks</h3><ul class="chips"><li class="chip">Node.js</li><li class="chip">Express</li><li class="chip">React</li><li class="chip">ASP.NET Core</li><li class="chip">Echo</li><li class="chip">Flask</li><li class="chip">WebAssembly</li></ul></div><div class="stack-row reveal"><h3>Real-time and messaging</h3><ul class="chips"><li class="chip">WebSocket</li><li class="chip">Socket.IO</li><li class="chip">gRPC</li><li class="chip">RabbitMQ</li><li class="chip">WebRTC (OpenVidu)</li></ul></div><div class="stack-row reveal"><h3>Data</h3><ul class="chips"><li class="chip">MongoDB</li><li class="chip">MySQL</li><li class="chip">PostgreSQL</li><li class="chip">Redis</li><li class="chip">ArangoDB</li><li class="chip">MinIO / S3</li></ul></div><div class="stack-row reveal"><h3>Delivery</h3><ul class="chips"><li class="chip">Docker</li><li class="chip">GitHub Actions</li><li class="chip">pnpm</li><li class="chip">Vite</li><li class="chip">Vitest</li><li class="chip">Playwright</li><li class="chip">xUnit</li><li class="chip">node:test</li></ul></div><div class="stack-row reveal"><h3>Domains</h3><ul class="chips"><li class="chip">Power plants and grids</li><li class="chip">Single-line diagrams</li><li class="chip">CAD and GIS</li><li class="chip">ERP and MES</li><li class="chip">Fintech</li><li class="chip">Video calls</li></ul></div></div>
+  </div>
+</section>
+
+<section class="section alt" id="open-source">
+  <div class="wrap">
+    <header class="section-head"><p class="eyebrow">Open source</p><h2>More from the founder</h2><p>Earlier and smaller open-source work by Amin Abbasi, on his two GitHub accounts: starters, system-design studies and libraries across five languages.</p></header>
+    <div class="filters" role="group" aria-label="Filter by language"><button type="button" class="filter on" data-filter="all" aria-pressed="true">All</button><button type="button" class="filter" data-filter="ts" aria-pressed="false"><i class="dot ts"></i>TypeScript</button><button type="button" class="filter" data-filter="js" aria-pressed="false"><i class="dot js"></i>JavaScript</button><button type="button" class="filter" data-filter="go" aria-pressed="false"><i class="dot go"></i>Go</button><button type="button" class="filter" data-filter="cs" aria-pressed="false"><i class="dot cs"></i>C#</button><button type="button" class="filter" data-filter="py" aria-pressed="false"><i class="dot py"></i>Python</button></div>
+    <div class="grid repos">
+<article class="repo reveal" data-lang="ts">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/typescript-boilerplate" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/typescript-boilerplate.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/typescript-boilerplate" rel="noopener" target="_blank">TypeScript micro-service boilerplate</a></h3>
+    <p class="repo-path">amin-abbasi/typescript-boilerplate</p>
+    <p>A layered micro-service starter with Express, MongoDB, MySQL, Redis, Docker and OpenAPI, kept as a reference for hand-built TypeScript architecture.</p>
+    <ul class="chips"><li class="tag">Express</li><li class="tag">MongoDB</li><li class="tag">Redis</li><li class="tag">Docker</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot ts"></i>TypeScript</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/typescript-boilerplate">42</b></span>
+    
+    
+  </footer>
+</article>
+<article class="repo reveal" data-lang="ts">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/arango-edge-patterns" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/arango-edge-patterns.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/arango-edge-patterns" rel="noopener" target="_blank">ArangoDB edge patterns for ERP</a></h3>
+    <p class="repo-path">amin-abbasi/arango-edge-patterns</p>
+    <p>Graph patterns from real ERP systems: category trees, warehouse hierarchies and traversals on ArangoDB edge collections, with the article that explains them.</p>
+    <ul class="chips"><li class="tag">ArangoDB</li><li class="tag">Graphs</li><li class="tag">ERP</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot ts"></i>TypeScript</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/arango-edge-patterns">2</b></span>
+    
+    <a href="https://dev.to/amin4193/escaping-recursive-hell-building-erp-hierarchies-with-arangodb-edges-751" rel="noopener" target="_blank"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg>Article on DEV</a>
+  </footer>
+</article>
+<article class="repo reveal" data-lang="ts">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/node-performance-gotchas" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/node-performance-gotchas.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/node-performance-gotchas" rel="noopener" target="_blank">The Leaky Pipe: Node.js performance gotchas</a></h3>
+    <p class="repo-path">amin-abbasi/node-performance-gotchas</p>
+    <p>Memory leaks, event-loop blocking and stream backpressure, each with the problem and the fix side by side and measured.</p>
+    <ul class="chips"><li class="tag">Node.js</li><li class="tag">V8</li><li class="tag">Streams</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot ts"></i>TypeScript</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/node-performance-gotchas">3</b></span>
+    
+    
+  </footer>
+</article>
+<article class="repo reveal" data-lang="ts">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/system-design-flash-sale" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/system-design-flash-sale.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/system-design-flash-sale" rel="noopener" target="_blank">FlashScale: a flash-sale system design</a></h3>
+    <p class="repo-path">amin-abbasi/system-design-flash-sale</p>
+    <p>Sharding, cache-aside and load balancing that survive a Black Friday spike, runnable locally with live metrics.</p>
+    <ul class="chips"><li class="tag">Sharding</li><li class="tag">Caching</li><li class="tag">Load balancing</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot ts"></i>TypeScript</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/system-design-flash-sale">1</b></span>
+    
+    
+  </footer>
+</article>
+<article class="repo reveal" data-lang="ts">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/gach" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/gach.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/gach" rel="noopener" target="_blank">gach: terminal colours</a></h3>
+    <p class="repo-path">amin-abbasi/gach</p>
+    <p>Chainable ANSI styling for JavaScript and TypeScript consoles: colours, RGB and hex, styles and resets. Used by @araminix/lib.</p>
+    <ul class="chips"><li class="tag">npm</li><li class="tag">CLI</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot ts"></i>TypeScript</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/gach">2</b></span>
+    <a href="https://www.npmjs.com/package/gach" rel="noopener" target="_blank"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>npm</a>
+    
+  </footer>
+</article>
+<article class="repo reveal" data-lang="js">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/javascript-boilerplate" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/javascript-boilerplate.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/javascript-boilerplate" rel="noopener" target="_blank">JavaScript micro-service boilerplate</a></h3>
+    <p class="repo-path">amin-abbasi/javascript-boilerplate</p>
+    <p>Express, MongoDB, Redis, Socket.IO and OpenAPI with Jest tests and asynchronous logging.</p>
+    <ul class="chips"><li class="tag">Express</li><li class="tag">Socket.IO</li><li class="tag">Jest</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot js"></i>JavaScript</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/javascript-boilerplate">4</b></span>
+    
+    
+  </footer>
+</article>
+<article class="repo reveal" data-lang="go">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/go-boilerplate" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/go-boilerplate.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/go-boilerplate" rel="noopener" target="_blank">Go server boilerplate</a></h3>
+    <p class="repo-path">amin-abbasi/go-boilerplate</p>
+    <p>A Go service with the Echo framework, MongoDB, Redis and JWT authentication.</p>
+    <ul class="chips"><li class="tag">Echo</li><li class="tag">MongoDB</li><li class="tag">JWT</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot go"></i>Go</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/go-boilerplate">2</b></span>
+    
+    
+  </footer>
+</article>
+<article class="repo reveal" data-lang="cs">
+  <a class="repo-cover" href="https://github.com/amin-euro/learning-api" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/learning-api.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-euro/learning-api" rel="noopener" target="_blank">Modular .NET API</a></h3>
+    <p class="repo-path">amin-euro/learning-api</p>
+    <p>ASP.NET Core with separate Core, Infrastructure and API layers, EF Core, and unit and integration tests.</p>
+    <ul class="chips"><li class="tag">.NET</li><li class="tag">EF Core</li><li class="tag">xUnit</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot cs"></i>C#</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-euro/learning-api">0</b></span>
+    
+    
+  </footer>
+</article>
+<article class="repo reveal" data-lang="js">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/open-vidu-node" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/open-vidu-node.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/open-vidu-node" rel="noopener" target="_blank">Video calls with OpenVidu</a></h3>
+    <p class="repo-path">amin-abbasi/open-vidu-node</p>
+    <p>WebRTC video calls with an OpenVidu server and a Node.js backend, run with Docker Compose.</p>
+    <ul class="chips"><li class="tag">WebRTC</li><li class="tag">OpenVidu</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot js"></i>JavaScript</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/open-vidu-node">3</b></span>
+    
+    
+  </footer>
+</article>
+<article class="repo reveal" data-lang="ts">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/node-public-private-key" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/node-public-private-key.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/node-public-private-key" rel="noopener" target="_blank">Service-to-service keys</a></h3>
+    <p class="repo-path">amin-abbasi/node-public-private-key</p>
+    <p>Services that trust each other through RSA key pairs, in TypeScript and Express.</p>
+    <ul class="chips"><li class="tag">RSA</li><li class="tag">Security</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot ts"></i>TypeScript</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/node-public-private-key">1</b></span>
+    
+    
+  </footer>
+</article>
+<article class="repo reveal" data-lang="ts">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/rabbitmq-express" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/rabbitmq-express.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/rabbitmq-express" rel="noopener" target="_blank">RPC over RabbitMQ</a></h3>
+    <p class="repo-path">amin-abbasi/rabbitmq-express</p>
+    <p>Request and reply between Express services over RabbitMQ queues.</p>
+    <ul class="chips"><li class="tag">RabbitMQ</li><li class="tag">RPC</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot ts"></i>TypeScript</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/rabbitmq-express">1</b></span>
+    
+    
+  </footer>
+</article>
+<article class="repo reveal" data-lang="ts">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/grpc-typescript-sample" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/grpc-typescript-sample.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/grpc-typescript-sample" rel="noopener" target="_blank">gRPC in TypeScript</a></h3>
+    <p class="repo-path">amin-abbasi/grpc-typescript-sample</p>
+    <p>Typed gRPC services and clients in TypeScript.</p>
+    <ul class="chips"><li class="tag">gRPC</li><li class="tag">Protobuf</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot ts"></i>TypeScript</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/grpc-typescript-sample">1</b></span>
+    
+    
+  </footer>
+</article>
+<article class="repo reveal" data-lang="py">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/hd-wallet-address" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/hd-wallet-address.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/hd-wallet-address" rel="noopener" target="_blank">HD wallet addresses</a></h3>
+    <p class="repo-path">amin-abbasi/hd-wallet-address</p>
+    <p>A small Flask service that derives addresses from a hierarchical deterministic wallet.</p>
+    <ul class="chips"><li class="tag">Flask</li><li class="tag">Crypto</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot py"></i>Python</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/hd-wallet-address">1</b></span>
+    
+    
+  </footer>
+</article>
+<article class="repo reveal" data-lang="js">
+  <a class="repo-cover" href="https://github.com/amin-abbasi/node-chat" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/node-chat.svg" alt="" width="640" height="336" loading="lazy"></a>
+  <div class="repo-body">
+    <h3><a href="https://github.com/amin-abbasi/node-chat" rel="noopener" target="_blank">Real-time chat</a></h3>
+    <p class="repo-path">amin-abbasi/node-chat</p>
+    <p>A chat with Node.js, Socket.IO, Redis and React.</p>
+    <ul class="chips"><li class="tag">Socket.IO</li><li class="tag">Redis</li><li class="tag">React</li></ul>
+  </div>
+  <footer class="repo-foot">
+    <span class="lang"><i class="dot js"></i>JavaScript</span>
+    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/node-chat">1</b></span>
+    
+    
+  </footer>
+</article></div>
+    <p class="more"><a href="https://github.com/amin-abbasi?tab=repositories" rel="noopener" target="_blank">Every repository on GitHub<svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></p>
+  </div>
+</section>
+
+<section class="section" id="writing">
+  <div class="wrap">
+    <header class="section-head"><p class="eyebrow">Writing</p><h2>Notes from the work</h2></header>
+    <a class="article reveal" href="https://dev.to/amin4193/escaping-recursive-hell-building-erp-hierarchies-with-arangodb-edges-751" rel="noopener" target="_blank"><span class="card-icon"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg></span><div><p class="kind">DEV Community · March 2026</p><h3>Escaping “Recursive Hell”: Building ERP Hierarchies with ArangoDB Edges</h3><p>Why adjacency lists break down in real ERP data, and how edge collections and graph traversals model categories, warehouses and bills of materials instead.</p></div><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+  </div>
+</section>
+
+<section class="section alt" id="founder">
+  <div class="wrap founder reveal">
+    <div class="portrait"><img src="assets/img/founder.webp" alt="Amin Abbasi" width="240" height="240" loading="lazy"></div>
+    <div>
+      <p class="eyebrow">Founder</p>
+      <h2>Amin Abbasi</h2>
+      <p class="role">Founder · Lead backend architect</p>
+      <p>Amin founded Araminix to publish the runtimes, protocols and tools he would want to build on. He is a lead backend architect with more than ten years in Node.js, distributed systems and real-time pipelines, and has mentored more than thirty engineers.</p><p>He designs the stack's protocols and runtimes, writes the code and the documentation, and audits it: security reviews, measured performance work and the tests that keep both honest.</p>
+      <ul class="accounts"><li><a href="https://github.com/amin-abbasi" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg><span><b>github.com/amin-abbasi</b><small>main account</small></span></a></li><li><a href="https://github.com/amin-euro" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg><span><b>github.com/amin-euro</b><small>second account</small></span></a></li><li><a href="https://amin-abbasi.github.io/" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span><b>amin-abbasi.github.io</b><small>personal site</small></span></a></li><li><a href="https://dev.to/amin4193" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg><span><b>dev.to/amin4193</b><small>articles</small></span></a></li><li><a href="https://x.com/amin4193" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg><span><b>x.com/amin4193</b><small>posts</small></span></a></li></ul>
+      <p class="note"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg><span>Two GitHub accounts, one person: <b>amin-abbasi</b> is the main account and <b>amin-euro</b> the second.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="contact reveal">
+      <h2>Building something real-time, or software for power plants?</h2>
+      <p>Open an issue on any of the repositories, or reach Amin through his site or on X.</p>
+      <div class="actions"><a class="btn primary big" href="https://github.com/araminix" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>Araminix on GitHub</a><a class="btn big" href="https://amin-abbasi.github.io/" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>amin-abbasi.github.io</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <a class="brand" href="#top"><img src="assets/img/icon-64.png" width="28" height="28" alt="">Araminix</a>
+    <p>© <span id="year">2026</span> Araminix · No trackers, no cookies. Star and download counts come live from GitHub and npm.</p>
+    <nav aria-label="Elsewhere"><a href="https://github.com/araminix" rel="noopener" target="_blank">GitHub</a><a href="https://www.npmjs.com/org/araminix" rel="noopener" target="_blank">npm</a><a href="https://araminix.github.io/plantline/">plantline</a></nav>
+  </div>
+</footer>
+</body>
+</html>

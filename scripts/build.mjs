@@ -1,7 +1,7 @@
 // Builds index.html and the repository covers from content.mjs. No dependencies: `node scripts/build.mjs`.
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
-import { cover, heroArt, icon, libArt, platformArt } from "./art.mjs";
-import { capabilities, founder, kinds, principles, products, repos, site, stack, stats, writing } from "./content.mjs";
+import { boilerplateArt, cover, heroArt, icon, libArt, platformArt } from "./art.mjs";
+import { capabilities, featured, founder, principles, products, repos, site, stack, stats, writing } from "./content.mjs";
 
 const root = new URL("../", import.meta.url);
 const esc = (text) => String(text).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -32,7 +32,34 @@ const libCode = `<pre class="code" aria-label="A stream opened over a socket"><c
     <span class="k">const</span> answer = <span class="k">await</span> stream.<span class="f">read</span>(<span class="n">10</span>);
 }</code></pre>`;
 
-const media = { plantline: plantlineMedia, platform: () => `<div class="art-card">${platformArt()}</div>`, lib: () => `<div class="art-card">${libArt()}${libCode}</div>` };
+// gach: what the terminal shows, and the code that wrote it
+const rainbow = (text) => [...text].map((c, i) => (c === " " ? " " : `<span class="t-${["red", "yellow", "green", "cyan", "blue", "magenta"][i % 6]}">${esc(c)}</span>`)).join("");
+const gachMedia = () => `
+<div class="art-card">
+  <div class="terminal" role="img" aria-label="A terminal showing lines styled with gach: a green success, a yellow warning, a red error, an orange hex colour and rainbow text">
+    <div class="terminal-bar"><i></i><i></i><i></i><span>node deploy.js</span></div>
+    <pre><span class="t-green t-b">✔ Deployed to production</span>
+<span class="t-yellow t-b t-i">⚠ Disk almost full</span>
+<span class="t-red t-b t-u">✖ Payment service is down</span>
+<span class="t-orange">Brand colour #FF7733</span>
+${rainbow("Release 1.8 is out")}</pre>
+  </div>
+  <pre class="code" aria-label="The code that styles those lines"><code><span class="k">import</span> gach <span class="k">from</span> <span class="s">'gach'</span>;
+
+console.<span class="f">log</span>(<span class="f">gach</span>(<span class="s">'✔ Deployed to production'</span>).<span class="f">success</span>().text);
+console.<span class="f">log</span>(<span class="f">gach</span>(<span class="s">'⚠ Disk almost full'</span>).<span class="f">warning</span>().text);
+console.<span class="f">log</span>(<span class="f">gach</span>(<span class="s">'✖ Payment service is down'</span>).<span class="f">error</span>().text);
+console.<span class="f">log</span>(<span class="f">gach</span>(<span class="s">'Brand colour #FF7733'</span>).<span class="f">hex</span>(<span class="s">'#FF7733'</span>).text);
+console.<span class="f">log</span>(<span class="f">gach</span>(<span class="s">'Release 1.8 is out'</span>).<span class="f">rainbow</span>().text);</code></pre>
+</div>`;
+
+const media = {
+    plantline: plantlineMedia,
+    platform: () => `<div class="art-card">${platformArt()}</div>`,
+    lib: () => `<div class="art-card">${libArt()}${libCode}</div>`,
+    gach: gachMedia,
+    boilerplates: () => `<div class="art-card">${boilerplateArt()}</div>`,
+};
 
 const productBlock = (p, i) => `
 <article class="product${i % 2 ? " flip" : ""}" id="${p.id}">
@@ -43,10 +70,10 @@ const productBlock = (p, i) => `
     <p>${esc(p.text)}</p>
     <ul class="points">${p.points.map(([title, text]) => `<li>${icon("circle-check", 18)}<span><b>${esc(title)}.</b> ${esc(text)}</span></li>`).join("")}</ul>
     ${chips(p.tech)}
-    <div class="meta">
+    <div class="meta">${p.repos ? p.repos.map(([repo, label, stars]) => `<span>${icon("star", 16)}<b data-stars="${repo}">${stars}</b>&nbsp;<span class="unit">stars</span>&nbsp;· ${esc(label)}</span>`).join("") : `
       <span hidden>${icon("star", 16)}<b data-stars="${p.repo}"></b> <span class="unit">stars</span></span>
       <span>${icon("package", 16)}v${esc(p.version)}</span>
-      ${p.npm ? `<span hidden>${icon("download", 16)}<b data-npm="${p.npm}"></b> downloads last month</span>` : `<span>${icon("globe", 16)}free, in any browser</span>`}
+      ${p.npm ? `<span hidden>${icon("download", 16)}<b data-npm="${p.npm}"></b> downloads last month</span>` : `<span>${icon("globe", 16)}free, in any browser</span>`}`}
     </div>
     <div class="actions">${p.links.map(link).join("")}</div>
   </div>
@@ -55,19 +82,14 @@ const productBlock = (p, i) => `
 
 // ---------- Open source ----------
 
-const KIND = Object.fromEntries(kinds);
-const carded = repos.filter((r) => r.icon);
-const listed = repos.filter((r) => !r.icon);
-const repoLink = (r, text) => `<a href="https://github.com/${r.repo}" rel="noopener" target="_blank">${esc(text)}</a>`;
-
 const repoCard = (r) => {
     const name = r.repo.split("/")[1];
     return `
-<article class="repo reveal" data-kind="${r.kind}">
+<article class="repo reveal">
   <a class="repo-cover" href="https://github.com/${r.repo}" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/${name}.svg" alt="" width="640" height="336" loading="lazy"></a>
   <div class="repo-body">
-    <p class="kind">${esc(KIND[r.kind])}</p>
-    <h3>${repoLink(r, r.title)}</h3>
+    <p class="kind">${esc(r.kind)}</p>
+    <h4><a href="https://github.com/${r.repo}" rel="noopener" target="_blank">${esc(r.title)}</a></h4>
     <p class="repo-path">${esc(r.repo)}</p>
     <p>${esc(r.text)}</p>
     ${chips(r.tags, "tag")}
@@ -75,25 +97,10 @@ const repoCard = (r) => {
   <footer class="repo-foot">
     <span class="lang"><i class="dot ${LANG[r.language]}"></i>${esc(r.language)}</span>
     <span>${icon("star", 15)}<b data-stars="${r.repo}">${r.stars}</b></span>
-    ${r.npm ? `<a href="https://www.npmjs.com/package/${r.npm}" rel="noopener" target="_blank">${icon("package", 15)}npm</a><span hidden>${icon("download", 15)}<b data-npm="${r.npm}"></b> a month</span>` : ""}
-    ${r.extra ? `<a href="${r.extra.href}" rel="noopener" target="_blank">${icon(r.extra.href.includes("dev.to") ? "newspaper" : "globe", 15)}${esc(r.extra.label)}</a>` : ""}
+    ${r.extra ? `<a href="${r.extra.href}" rel="noopener" target="_blank">${icon("newspaper", 15)}${esc(r.extra.label)}</a>` : ""}
   </footer>
 </article>`;
 };
-
-// The rest: one row each
-const repoRow = (r) => `
-<li class="repo-row" data-kind="${r.kind}">
-  <div><h4>${repoLink(r, r.title)}</h4><p>${esc(r.text)}</p></div>
-  <span class="repo-path">${esc(r.repo.split("/")[1])}</span>
-  <span class="lang"><i class="dot ${LANG[r.language]}"></i>${esc(r.language)}</span>
-  <span class="row-kind">${esc(KIND[r.kind])}</span>
-</li>`;
-
-const count = (kind) => repos.filter((r) => r.kind === kind).length;
-const filterButton = ([kind, label]) => `<button type="button" class="filter${kind === "all" ? " on" : ""}" data-filter="${kind}" aria-pressed="${kind === "all"}">${esc(label)}<span class="count">${kind === "all" ? repos.length : count(kind)}</span></button>`;
-const languageNames = [...new Set(repos.map((r) => r.language))];
-const inWords = (items) => (items.length > 1 ? `${items.slice(0, -1).join(", ")} and ${items.at(-1)}` : items[0]);
 
 // ---------- Page ----------
 
@@ -159,7 +166,7 @@ const html = `<!doctype html>
     </div>
     ${heroArt("assets/img/logo-400.webp")}
   </div>
-  <div class="wrap"><dl class="stats">${stats.map((s) => `<div><dt>${esc(s.label)}</dt><dd${s.live ? ` data-live="${s.live}"` : ""}>${esc(s.value === "repos" ? products.length + repos.length : s.value)}</dd></div>`).join("")}</dl></div>
+  <div class="wrap"><dl class="stats">${stats.map((s) => `<div><dt>${esc(s.label)}</dt><dd${s.live ? ` data-live="${s.live}"` : ""}>${esc(s.value)}</dd></div>`).join("")}</dl></div>
 </section>
 
 <section class="section" id="products">
@@ -172,14 +179,11 @@ const html = `<!doctype html>
 
 <section class="section alt" id="open-source">
   <div class="wrap">
-    <header class="section-head"><p class="eyebrow">Open source</p><h2>Everything on GitHub</h2><p>One person, one account: the Araminix organisation belongs to <a href="https://github.com/amin-abbasi" rel="noopener" target="_blank">amin-abbasi</a>, and so does everything else here. Beside the three products, ${repos.length} public repositories of libraries, architecture studies, starters and samples, in ${inWords(languageNames)}.</p></header>
-    <div class="filters" role="group" aria-label="Show repositories of a kind">${[["all", "All"], ...kinds].map(filterButton).join("")}</div>
-    <div class="grid repos" data-group>${carded.map(repoCard).join("")}</div>
-    <div class="repo-more" data-group>
-      <h3 class="sub-head">More repositories</h3>
-      <ul class="repo-list">${listed.map(repoRow).join("")}</ul>
-    </div>
-    <p class="more"><a href="https://github.com/amin-abbasi?tab=repositories" rel="noopener" target="_blank">All of them on GitHub${icon("arrow-up-right", 16)}</a></p>
+    <header class="section-head"><p class="eyebrow">Open source</p><h2>Libraries and starters</h2><p>One person, one account: the Araminix organisation belongs to <a href="https://github.com/amin-abbasi" rel="noopener" target="_blank">amin-abbasi</a>, and so does everything here. A library on npm and the micro-service starters, then studies from real work.</p></header>
+    ${featured.map(productBlock).join("")}
+    <h3 class="sub-head">Studies and a Go starter</h3>
+    <div class="grid repos">${repos.map(repoCard).join("")}</div>
+    <p class="more"><a href="https://github.com/amin-abbasi?tab=repositories" rel="noopener" target="_blank">Every repository on GitHub${icon("arrow-up-right", 16)}</a></p>
   </div>
 </section>
 
@@ -238,5 +242,5 @@ writeFileSync(new URL("index.html", root), html);
 // The covers of the repositories shown as cards, and no others
 rmSync(new URL("assets/img/covers/", root), { recursive: true, force: true });
 mkdirSync(new URL("assets/img/covers/", root), { recursive: true });
-for (const r of carded) writeFileSync(new URL(`assets/img/covers/${r.repo.split("/")[1]}.svg`, root), cover(r));
-console.log(`index.html and ${carded.length} covers`);
+for (const r of repos) writeFileSync(new URL(`assets/img/covers/${r.repo.split("/")[1]}.svg`, root), cover(r));
+console.log(`index.html and ${repos.length} covers`);

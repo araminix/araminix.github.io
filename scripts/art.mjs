@@ -68,6 +68,30 @@ export const platformArt = () => `
   <path d="M120 75 H150 M120 163 H150 M280 100 H330 M280 166 H330 M280 232 H330 M120 303 H150 M280 303 H330" class="wire"/>
 </svg>`;
 
+/** The micro-service boilerplates: a request through the layers, the database behind one interface, and what sits beside. */
+export const boilerplateArt = () => `
+<svg viewBox="0 0 600 380" class="art" role="img" aria-label="A request passes the middlewares, then routes, validation, controllers, services and repositories; the repositories reach MongoDB or MySQL and PostgreSQL; OpenAPI pages, Socket.IO and Redis sit beside">
+  ${box(16, 12, 110, 60, "Request", "HTTP · JSON")}
+  ${box(150, 12, 434, 60, "Middlewares", "helmet · CORS · rate limit · JWT and roles · i18n · request logs", "outer")}
+  ${[
+      ["Routes", "/api/…", 92],
+      ["Validation", "Zod or Joi", 148],
+      ["Controllers", "one per resource", 204],
+      ["Services", "the business rules", 260],
+      ["Repositories", "one interface", 316],
+  ]
+      .map(([title, sub, y]) => `${box(150, y, 220, 48, title, sub, "worker")}`)
+      .join("")}
+  ${box(404, 92, 180, 48, "OpenAPI pages", "from the routes", "agent")}
+  ${box(404, 148, 180, 48, "Socket.IO", "ready to switch on", "agent")}
+  ${box(404, 260, 180, 48, "Redis", "cache", "agent")}
+  ${box(404, 316, 86, 48, "MongoDB", "Mongoose")}
+  ${box(498, 316, 86, 48, "SQL", "TypeORM")}
+  ${box(16, 92, 110, 272, "Tested", "")}
+  <text x="30" y="140" class="art-s">Jest</text><text x="30" y="162" class="art-s">Supertest</text><text x="30" y="184" class="art-s">Docker</text><text x="30" y="206" class="art-s">Compose</text><text x="30" y="228" class="art-s">GitHub</text><text x="30" y="246" class="art-s">Actions</text>
+  <path d="M126 42 H150 M260 72 V92 M260 140 V148 M260 196 V204 M260 252 V260 M260 308 V316 M370 116 H404 M370 284 H404 M370 340 H404" class="wire"/>
+</svg>`;
+
 const TONES = {
     ts: ["#2563eb", "#7c3aed"],
     graph: ["#0f766e", "#2563eb"],

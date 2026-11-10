@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src https://api.github.com https://api.npmjs.org; object-src 'none'; base-uri 'self'; form-action 'none'">
 <title>Araminix · streaming runtimes, real-time platforms and energy software</title>
-<meta name="description" content="Araminix is Amin Abbasi's open-source work: plantline, @araminix/platform and @araminix/lib, and two dozen more repositories of libraries, architecture studies and starters.">
+<meta name="description" content="Araminix is Amin Abbasi's open-source work: plantline, @araminix/platform and @araminix/lib, the gach library, micro-service starters and architecture studies.">
 <link rel="canonical" href="https://araminix.github.io/">
 <meta name="theme-color" content="#070b14" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
@@ -18,12 +18,12 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://araminix.github.io/">
 <meta property="og:title" content="Araminix · Where serenity meets speed.">
-<meta property="og:description" content="Araminix is Amin Abbasi's open-source work: plantline, @araminix/platform and @araminix/lib, and two dozen more repositories of libraries, architecture studies and starters.">
+<meta property="og:description" content="Araminix is Amin Abbasi's open-source work: plantline, @araminix/platform and @araminix/lib, the gach library, micro-service starters and architecture studies.">
 <meta property="og:image" content="https://araminix.github.io/assets/img/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Araminix","url":"https://araminix.github.io/","logo":"https://araminix.github.io/assets/img/icon-180.png","description":"Araminix is Amin Abbasi's open-source work: plantline, @araminix/platform and @araminix/lib, and two dozen more repositories of libraries, architecture studies and starters.","founder":{"@type":"Person","name":"Amin Abbasi","url":"https://amin-abbasi.github.io/","sameAs":["https://github.com/amin-abbasi","https://amin-abbasi.github.io/","https://dev.to/amin4193","https://x.com/amin4193"]},"sameAs":["https://github.com/araminix","https://www.npmjs.com/org/araminix"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Araminix","url":"https://araminix.github.io/","logo":"https://araminix.github.io/assets/img/icon-180.png","description":"Araminix is Amin Abbasi's open-source work: plantline, @araminix/platform and @araminix/lib, the gach library, micro-service starters and architecture studies.","founder":{"@type":"Person","name":"Amin Abbasi","url":"https://amin-abbasi.github.io/","sameAs":["https://github.com/amin-abbasi","https://amin-abbasi.github.io/","https://dev.to/amin4193","https://x.com/amin4193"]},"sameAs":["https://github.com/araminix","https://www.npmjs.com/org/araminix"]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to the content</a>
@@ -67,7 +67,7 @@
   <span class="chip c4"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg>plantline</span>
 </div>
   </div>
-  <div class="wrap"><dl class="stats"><div><dt>flagship products</dt><dd>3</dd></div><div><dt>open-source repositories</dt><dd>26</dd></div><div><dt>npm downloads last month</dt><dd data-live="npm-total">2.7k+</dd></div><div><dt>automated tests in the products</dt><dd>390+</dd></div></dl></div>
+  <div class="wrap"><dl class="stats"><div><dt>flagship products</dt><dd>3</dd></div><div><dt>npm downloads last month</dt><dd data-live="npm-total">2.6k+</dd></div><div><dt>automated tests in the products</dt><dd>390+</dd></div><div><dt>years building backends</dt><dd>10+</dd></div></dl></div>
 </section>
 
 <section class="section" id="products">
@@ -179,312 +179,132 @@
 
 <section class="section alt" id="open-source">
   <div class="wrap">
-    <header class="section-head"><p class="eyebrow">Open source</p><h2>Everything on GitHub</h2><p>One person, one account: the Araminix organisation belongs to <a href="https://github.com/amin-abbasi" rel="noopener" target="_blank">amin-abbasi</a>, and so does everything else here. Beside the three products, 23 public repositories of libraries, architecture studies, starters and samples, in TypeScript, JavaScript, Go and Python.</p></header>
-    <div class="filters" role="group" aria-label="Show repositories of a kind"><button type="button" class="filter on" data-filter="all" aria-pressed="true">All<span class="count">23</span></button><button type="button" class="filter" data-filter="tools" aria-pressed="false">Libraries and tools<span class="count">3</span></button><button type="button" class="filter" data-filter="studies" aria-pressed="false">Studies<span class="count">3</span></button><button type="button" class="filter" data-filter="starters" aria-pressed="false">Starters<span class="count">4</span></button><button type="button" class="filter" data-filter="samples" aria-pressed="false">Samples<span class="count">8</span></button><button type="button" class="filter" data-filter="challenges" aria-pressed="false">Coding challenges<span class="count">5</span></button></div>
-    <div class="grid repos" data-group>
-<article class="repo reveal" data-kind="starters">
-  <a class="repo-cover" href="https://github.com/amin-abbasi/typescript-boilerplate" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/typescript-boilerplate.svg" alt="" width="640" height="336" loading="lazy"></a>
-  <div class="repo-body">
-    <p class="kind">Starters</p>
-    <h3><a href="https://github.com/amin-abbasi/typescript-boilerplate" rel="noopener" target="_blank">TypeScript micro-service boilerplate</a></h3>
-    <p class="repo-path">amin-abbasi/typescript-boilerplate</p>
-    <p>A layered micro-service starter with Express, MongoDB, MySQL, Redis, Docker and OpenAPI, kept as a reference for hand-built TypeScript architecture.</p>
-    <ul class="chips"><li class="tag">Express</li><li class="tag">MongoDB</li><li class="tag">Redis</li><li class="tag">Docker</li></ul>
+    <header class="section-head"><p class="eyebrow">Open source</p><h2>Libraries and starters</h2><p>One person, one account: the Araminix organisation belongs to <a href="https://github.com/amin-abbasi" rel="noopener" target="_blank">amin-abbasi</a>, and so does everything here. A library on npm and the micro-service starters, then studies from real work.</p></header>
+    
+<article class="product" id="gach">
+  <div class="product-text">
+    <p class="kind">npm package · Terminal output</p>
+    <h3>gach</h3>
+    <p class="product-tagline">Chainable colours and styles for terminal text.</p>
+    <p>A small TypeScript library for colouring console output: named colours, RGB and hex, bold, italic, underline and more, chained on one call. Types included and nothing else to install. It colours the logs of @araminix/lib, both micro-service starters and the Node.js performance study.</p>
+    <ul class="points"><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>One chain.</b> color and bgColor by name, rgb and hex, bold, italic, underline, strikethrough and inverse, each returning the same object, and reset to start again.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Presets.</b> success, error, warning and rainbow for the usual messages, and customStyle to set several at once.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Typed, no dependencies.</b> Written in TypeScript with its declarations; colour names are checked by the compiler and wrong values are reported, not thrown.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>In use since 2021.</b> 17 releases on npm and about 3,700 downloads in the last year.</span></li></ul>
+    <ul class="chips"><li class="chip">TypeScript</li><li class="chip">ANSI escape codes</li><li class="chip">Node.js</li><li class="chip">npm</li></ul>
+    <div class="meta">
+      <span hidden><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/gach"></b> <span class="unit">stars</span></span>
+      <span><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>v1.7.5</span>
+      <span hidden><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg><b data-npm="gach"></b> downloads last month</span>
+    </div>
+    <div class="actions"><a class="btn primary" href="https://www.npmjs.com/package/gach" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>npm</a><a class="btn" href="https://github.com/amin-abbasi/gach" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>Source</a></div>
   </div>
-  <footer class="repo-foot">
-    <span class="lang"><i class="dot ts"></i>TypeScript</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/typescript-boilerplate">42</b></span>
-    
-    
-  </footer>
+  <div class="product-media reveal">
+<div class="art-card">
+  <div class="terminal" role="img" aria-label="A terminal showing lines styled with gach: a green success, a yellow warning, a red error, an orange hex colour and rainbow text">
+    <div class="terminal-bar"><i></i><i></i><i></i><span>node deploy.js</span></div>
+    <pre><span class="t-green t-b">✔ Deployed to production</span>
+<span class="t-yellow t-b t-i">⚠ Disk almost full</span>
+<span class="t-red t-b t-u">✖ Payment service is down</span>
+<span class="t-orange">Brand colour #FF7733</span>
+<span class="t-red">R</span><span class="t-yellow">e</span><span class="t-green">l</span><span class="t-cyan">e</span><span class="t-blue">a</span><span class="t-magenta">s</span><span class="t-red">e</span> <span class="t-green">1</span><span class="t-cyan">.</span><span class="t-blue">8</span> <span class="t-red">i</span><span class="t-yellow">s</span> <span class="t-cyan">o</span><span class="t-blue">u</span><span class="t-magenta">t</span></pre>
+  </div>
+  <pre class="code" aria-label="The code that styles those lines"><code><span class="k">import</span> gach <span class="k">from</span> <span class="s">'gach'</span>;
+
+console.<span class="f">log</span>(<span class="f">gach</span>(<span class="s">'✔ Deployed to production'</span>).<span class="f">success</span>().text);
+console.<span class="f">log</span>(<span class="f">gach</span>(<span class="s">'⚠ Disk almost full'</span>).<span class="f">warning</span>().text);
+console.<span class="f">log</span>(<span class="f">gach</span>(<span class="s">'✖ Payment service is down'</span>).<span class="f">error</span>().text);
+console.<span class="f">log</span>(<span class="f">gach</span>(<span class="s">'Brand colour #FF7733'</span>).<span class="f">hex</span>(<span class="s">'#FF7733'</span>).text);
+console.<span class="f">log</span>(<span class="f">gach</span>(<span class="s">'Release 1.8 is out'</span>).<span class="f">rainbow</span>().text);</code></pre>
+</div></div>
 </article>
-<article class="repo reveal" data-kind="studies">
+<article class="product flip" id="boilerplates">
+  <div class="product-text">
+    <p class="kind">Starters · TypeScript and JavaScript</p>
+    <h3>Micro-service boilerplates</h3>
+    <p class="product-tagline">A layered Express service to start from, in TypeScript or JavaScript.</p>
+    <p>Two starters for REST micro-services on Express 5, built up over six years. Each request passes the same layers: security middlewares, routes, validation, controllers, services and repositories, with the database behind one interface. The TypeScript one is kept as a reference architecture; the JavaScript one is maintained.</p>
+    <ul class="points"><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Layered.</b> Routes, validators, controllers, services and repositories, each in its own folder; validation with Zod (TypeScript) or Joi (JavaScript).</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Your database.</b> MongoDB with Mongoose, or MySQL and PostgreSQL with TypeORM, behind the same repository interface; Redis for caching.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Production basics.</b> Helmet, CORS, rate limiting, JWT sign-in with roles, request logs, one error format and messages in English and Persian.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Documented and real-time.</b> OpenAPI (Swagger) pages from the routes, and Socket.IO ready to switch on.</span></li><li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><b>Tested and containerised.</b> Jest and Supertest; the TypeScript one runs its integration tests against MongoDB and MySQL in Docker Compose, in CI on GitHub Actions.</span></li></ul>
+    <ul class="chips"><li class="chip">Node.js</li><li class="chip">Express 5</li><li class="chip">TypeScript</li><li class="chip">JavaScript</li><li class="chip">MongoDB</li><li class="chip">TypeORM</li><li class="chip">Redis</li><li class="chip">Socket.IO</li><li class="chip">OpenAPI</li><li class="chip">Jest</li><li class="chip">Docker</li></ul>
+    <div class="meta"><span><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/typescript-boilerplate">42</b>&nbsp;<span class="unit">stars</span>&nbsp;· TypeScript</span><span><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/javascript-boilerplate">4</b>&nbsp;<span class="unit">stars</span>&nbsp;· JavaScript</span>
+    </div>
+    <div class="actions"><a class="btn primary" href="https://github.com/amin-abbasi/typescript-boilerplate" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>TypeScript</a><a class="btn" href="https://github.com/amin-abbasi/javascript-boilerplate" rel="noopener" target="_blank"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.34-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>JavaScript</a></div>
+  </div>
+  <div class="product-media reveal"><div class="art-card">
+<svg viewBox="0 0 600 380" class="art" role="img" aria-label="A request passes the middlewares, then routes, validation, controllers, services and repositories; the repositories reach MongoDB or MySQL and PostgreSQL; OpenAPI pages, Socket.IO and Redis sit beside">
+  <g class="art-box "><rect x="16" y="12" width="110" height="60" rx="12"/><text x="30" y="36" class="art-t">Request</text><text x="30" y="54" class="art-s">HTTP · JSON</text></g>
+  <g class="art-box outer"><rect x="150" y="12" width="434" height="60" rx="12"/><text x="164" y="36" class="art-t">Middlewares</text><text x="164" y="54" class="art-s">helmet · CORS · rate limit · JWT and roles · i18n · request logs</text></g>
+  <g class="art-box worker"><rect x="150" y="92" width="220" height="48" rx="12"/><text x="164" y="116" class="art-t">Routes</text><text x="164" y="134" class="art-s">/api/…</text></g><g class="art-box worker"><rect x="150" y="148" width="220" height="48" rx="12"/><text x="164" y="172" class="art-t">Validation</text><text x="164" y="190" class="art-s">Zod or Joi</text></g><g class="art-box worker"><rect x="150" y="204" width="220" height="48" rx="12"/><text x="164" y="228" class="art-t">Controllers</text><text x="164" y="246" class="art-s">one per resource</text></g><g class="art-box worker"><rect x="150" y="260" width="220" height="48" rx="12"/><text x="164" y="284" class="art-t">Services</text><text x="164" y="302" class="art-s">the business rules</text></g><g class="art-box worker"><rect x="150" y="316" width="220" height="48" rx="12"/><text x="164" y="340" class="art-t">Repositories</text><text x="164" y="358" class="art-s">one interface</text></g>
+  <g class="art-box agent"><rect x="404" y="92" width="180" height="48" rx="12"/><text x="418" y="116" class="art-t">OpenAPI pages</text><text x="418" y="134" class="art-s">from the routes</text></g>
+  <g class="art-box agent"><rect x="404" y="148" width="180" height="48" rx="12"/><text x="418" y="172" class="art-t">Socket.IO</text><text x="418" y="190" class="art-s">ready to switch on</text></g>
+  <g class="art-box agent"><rect x="404" y="260" width="180" height="48" rx="12"/><text x="418" y="284" class="art-t">Redis</text><text x="418" y="302" class="art-s">cache</text></g>
+  <g class="art-box "><rect x="404" y="316" width="86" height="48" rx="12"/><text x="418" y="340" class="art-t">MongoDB</text><text x="418" y="358" class="art-s">Mongoose</text></g>
+  <g class="art-box "><rect x="498" y="316" width="86" height="48" rx="12"/><text x="512" y="340" class="art-t">SQL</text><text x="512" y="358" class="art-s">TypeORM</text></g>
+  <g class="art-box "><rect x="16" y="92" width="110" height="272" rx="12"/><text x="30" y="116" class="art-t">Tested</text></g>
+  <text x="30" y="140" class="art-s">Jest</text><text x="30" y="162" class="art-s">Supertest</text><text x="30" y="184" class="art-s">Docker</text><text x="30" y="206" class="art-s">Compose</text><text x="30" y="228" class="art-s">GitHub</text><text x="30" y="246" class="art-s">Actions</text>
+  <path d="M126 42 H150 M260 72 V92 M260 140 V148 M260 196 V204 M260 252 V260 M260 308 V316 M370 116 H404 M370 284 H404 M370 340 H404" class="wire"/>
+</svg></div></div>
+</article>
+    <h3 class="sub-head">Studies and a Go starter</h3>
+    <div class="grid repos">
+<article class="repo reveal">
   <a class="repo-cover" href="https://github.com/amin-abbasi/arango-edge-patterns" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/arango-edge-patterns.svg" alt="" width="640" height="336" loading="lazy"></a>
   <div class="repo-body">
-    <p class="kind">Studies</p>
-    <h3><a href="https://github.com/amin-abbasi/arango-edge-patterns" rel="noopener" target="_blank">ArangoDB edge patterns for ERP</a></h3>
+    <p class="kind">Study</p>
+    <h4><a href="https://github.com/amin-abbasi/arango-edge-patterns" rel="noopener" target="_blank">ArangoDB edge patterns for ERP</a></h4>
     <p class="repo-path">amin-abbasi/arango-edge-patterns</p>
-    <p>Graph patterns from real ERP systems: category trees, warehouse hierarchies and traversals on ArangoDB edge collections, with the article that explains them.</p>
-    <ul class="chips"><li class="tag">ArangoDB</li><li class="tag">Graphs</li><li class="tag">ERP</li></ul>
+    <p>Graph patterns from real ERP systems: category trees, warehouse hierarchies and traversals on ArangoDB edge collections, tested against a real database, with the article that explains them.</p>
+    <ul class="chips"><li class="tag">ArangoDB</li><li class="tag">Graphs</li><li class="tag">ERP</li><li class="tag">Jest</li></ul>
   </div>
   <footer class="repo-foot">
     <span class="lang"><i class="dot ts"></i>TypeScript</span>
     <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/arango-edge-patterns">2</b></span>
-    
     <a href="https://dev.to/amin4193/escaping-recursive-hell-building-erp-hierarchies-with-arangodb-edges-751" rel="noopener" target="_blank"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg>Article on DEV</a>
   </footer>
 </article>
-<article class="repo reveal" data-kind="studies">
+<article class="repo reveal">
   <a class="repo-cover" href="https://github.com/amin-abbasi/node-performance-gotchas" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/node-performance-gotchas.svg" alt="" width="640" height="336" loading="lazy"></a>
   <div class="repo-body">
-    <p class="kind">Studies</p>
-    <h3><a href="https://github.com/amin-abbasi/node-performance-gotchas" rel="noopener" target="_blank">The Leaky Pipe: Node.js performance gotchas</a></h3>
+    <p class="kind">Study</p>
+    <h4><a href="https://github.com/amin-abbasi/node-performance-gotchas" rel="noopener" target="_blank">The Leaky Pipe: Node.js performance gotchas</a></h4>
     <p class="repo-path">amin-abbasi/node-performance-gotchas</p>
-    <p>Memory leaks, event-loop blocking and stream backpressure, each with the problem and the fix side by side and measured.</p>
+    <p>Memory leaks, event-loop blocking and stream backpressure, each as a problem endpoint and a fixed one, with scripts that load them and show the difference.</p>
     <ul class="chips"><li class="tag">Node.js</li><li class="tag">V8</li><li class="tag">Streams</li></ul>
   </div>
   <footer class="repo-foot">
     <span class="lang"><i class="dot ts"></i>TypeScript</span>
     <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/node-performance-gotchas">3</b></span>
     
-    
   </footer>
 </article>
-<article class="repo reveal" data-kind="studies">
+<article class="repo reveal">
   <a class="repo-cover" href="https://github.com/amin-abbasi/system-design-flash-sale" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/system-design-flash-sale.svg" alt="" width="640" height="336" loading="lazy"></a>
   <div class="repo-body">
-    <p class="kind">Studies</p>
-    <h3><a href="https://github.com/amin-abbasi/system-design-flash-sale" rel="noopener" target="_blank">FlashScale: a flash-sale system design</a></h3>
+    <p class="kind">Study</p>
+    <h4><a href="https://github.com/amin-abbasi/system-design-flash-sale" rel="noopener" target="_blank">FlashScale: a flash-sale system design</a></h4>
     <p class="repo-path">amin-abbasi/system-design-flash-sale</p>
-    <p>Sharding, cache-aside and load balancing that survive a Black Friday spike, runnable locally with live metrics.</p>
+    <p>Sharding, cache-aside and load balancing simulated in one process, with stress tests from ten thousand to a million orders.</p>
     <ul class="chips"><li class="tag">Sharding</li><li class="tag">Caching</li><li class="tag">Load balancing</li></ul>
   </div>
   <footer class="repo-foot">
     <span class="lang"><i class="dot ts"></i>TypeScript</span>
     <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/system-design-flash-sale">1</b></span>
     
-    
   </footer>
 </article>
-<article class="repo reveal" data-kind="tools">
-  <a class="repo-cover" href="https://github.com/amin-abbasi/gach" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/gach.svg" alt="" width="640" height="336" loading="lazy"></a>
-  <div class="repo-body">
-    <p class="kind">Libraries and tools</p>
-    <h3><a href="https://github.com/amin-abbasi/gach" rel="noopener" target="_blank">gach: terminal colours</a></h3>
-    <p class="repo-path">amin-abbasi/gach</p>
-    <p>Chainable ANSI styling for JavaScript and TypeScript consoles: colours, RGB and hex, styles and resets. Used by @araminix/lib.</p>
-    <ul class="chips"><li class="tag">npm</li><li class="tag">CLI</li></ul>
-  </div>
-  <footer class="repo-foot">
-    <span class="lang"><i class="dot ts"></i>TypeScript</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/gach">2</b></span>
-    <a href="https://www.npmjs.com/package/gach" rel="noopener" target="_blank"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>npm</a><span hidden><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg><b data-npm="gach"></b> a month</span>
-    
-  </footer>
-</article>
-<article class="repo reveal" data-kind="tools">
-  <a class="repo-cover" href="https://github.com/amin-abbasi/amin-abbasi.github.io" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/amin-abbasi.github.io.svg" alt="" width="640" height="336" loading="lazy"></a>
-  <div class="repo-body">
-    <p class="kind">Libraries and tools</p>
-    <h3><a href="https://github.com/amin-abbasi/amin-abbasi.github.io" rel="noopener" target="_blank">An architect's portfolio engine</a></h3>
-    <p class="repo-path">amin-abbasi/amin-abbasi.github.io</p>
-    <p>The personal site behind amin-abbasi.github.io: React 19 pre-rendered for search engines, a skill graph from one JSON file, English and Turkish, and a private analytics dashboard. Made to be forked.</p>
-    <ul class="chips"><li class="tag">React 19</li><li class="tag">Vite</li><li class="tag">SSG</li></ul>
-  </div>
-  <footer class="repo-foot">
-    <span class="lang"><i class="dot ts"></i>TypeScript</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/amin-abbasi.github.io">1</b></span>
-    
-    <a href="https://amin-abbasi.github.io/" rel="noopener" target="_blank"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>Open the site</a>
-  </footer>
-</article>
-<article class="repo reveal" data-kind="tools">
-  <a class="repo-cover" href="https://github.com/amin-abbasi/irtm-logs" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/irtm-logs.svg" alt="" width="640" height="336" loading="lazy"></a>
-  <div class="repo-body">
-    <p class="kind">Libraries and tools</p>
-    <h3><a href="https://github.com/amin-abbasi/irtm-logs" rel="noopener" target="_blank">irtm-logs: request logs for micro-services</a></h3>
-    <p class="repo-path">amin-abbasi/irtm-logs</p>
-    <p>An npm package that records each endpoint's request and response, with the object it acted on, across every micro-service of a system.</p>
-    <ul class="chips"><li class="tag">npm</li><li class="tag">Logging</li><li class="tag">Micro-services</li></ul>
-  </div>
-  <footer class="repo-foot">
-    <span class="lang"><i class="dot js"></i>JavaScript</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/irtm-logs">2</b></span>
-    <a href="https://www.npmjs.com/package/irtm-logs" rel="noopener" target="_blank"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>npm</a><span hidden><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg><b data-npm="irtm-logs"></b> a month</span>
-    
-  </footer>
-</article>
-<article class="repo reveal" data-kind="starters">
-  <a class="repo-cover" href="https://github.com/amin-abbasi/javascript-boilerplate" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/javascript-boilerplate.svg" alt="" width="640" height="336" loading="lazy"></a>
-  <div class="repo-body">
-    <p class="kind">Starters</p>
-    <h3><a href="https://github.com/amin-abbasi/javascript-boilerplate" rel="noopener" target="_blank">JavaScript micro-service boilerplate</a></h3>
-    <p class="repo-path">amin-abbasi/javascript-boilerplate</p>
-    <p>Express, MongoDB, Redis, Socket.IO and OpenAPI with Jest tests and asynchronous logging.</p>
-    <ul class="chips"><li class="tag">Express</li><li class="tag">Socket.IO</li><li class="tag">Jest</li></ul>
-  </div>
-  <footer class="repo-foot">
-    <span class="lang"><i class="dot js"></i>JavaScript</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/javascript-boilerplate">4</b></span>
-    
-    
-  </footer>
-</article>
-<article class="repo reveal" data-kind="starters">
+<article class="repo reveal">
   <a class="repo-cover" href="https://github.com/amin-abbasi/go-boilerplate" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/go-boilerplate.svg" alt="" width="640" height="336" loading="lazy"></a>
   <div class="repo-body">
-    <p class="kind">Starters</p>
-    <h3><a href="https://github.com/amin-abbasi/go-boilerplate" rel="noopener" target="_blank">Go server boilerplate</a></h3>
+    <p class="kind">Starter</p>
+    <h4><a href="https://github.com/amin-abbasi/go-boilerplate" rel="noopener" target="_blank">Go server boilerplate</a></h4>
     <p class="repo-path">amin-abbasi/go-boilerplate</p>
-    <p>A Go service with the Echo framework, MongoDB, Redis and JWT authentication.</p>
-    <ul class="chips"><li class="tag">Echo</li><li class="tag">MongoDB</li><li class="tag">JWT</li></ul>
+    <p>A Go service with the Echo framework, MongoDB, Redis and JWT authentication, run with Docker and live reload.</p>
+    <ul class="chips"><li class="tag">Echo</li><li class="tag">MongoDB</li><li class="tag">JWT</li><li class="tag">Docker</li></ul>
   </div>
   <footer class="repo-foot">
     <span class="lang"><i class="dot go"></i>Go</span>
     <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/go-boilerplate">2</b></span>
     
-    
-  </footer>
-</article>
-<article class="repo reveal" data-kind="starters">
-  <a class="repo-cover" href="https://github.com/amin-abbasi/go-server" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/go-server.svg" alt="" width="640" height="336" loading="lazy"></a>
-  <div class="repo-body">
-    <p class="kind">Starters</p>
-    <h3><a href="https://github.com/amin-abbasi/go-server" rel="noopener" target="_blank">Go HTTP servers: Gin, Fiber and Echo</a></h3>
-    <p class="repo-path">amin-abbasi/go-server</p>
-    <p>The same small server in the standard library and, one branch each, in Gin, Fiber and Echo, to compare the frameworks side by side.</p>
-    <ul class="chips"><li class="tag">net/http</li><li class="tag">Gin</li><li class="tag">Fiber</li><li class="tag">Echo</li></ul>
-  </div>
-  <footer class="repo-foot">
-    <span class="lang"><i class="dot go"></i>Go</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/go-server">1</b></span>
-    
-    
-  </footer>
-</article>
-<article class="repo reveal" data-kind="samples">
-  <a class="repo-cover" href="https://github.com/amin-abbasi/open-vidu-node" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/open-vidu-node.svg" alt="" width="640" height="336" loading="lazy"></a>
-  <div class="repo-body">
-    <p class="kind">Samples</p>
-    <h3><a href="https://github.com/amin-abbasi/open-vidu-node" rel="noopener" target="_blank">Video calls with OpenVidu</a></h3>
-    <p class="repo-path">amin-abbasi/open-vidu-node</p>
-    <p>WebRTC video calls with an OpenVidu server and a Node.js backend, run with Docker Compose.</p>
-    <ul class="chips"><li class="tag">WebRTC</li><li class="tag">OpenVidu</li></ul>
-  </div>
-  <footer class="repo-foot">
-    <span class="lang"><i class="dot js"></i>JavaScript</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/open-vidu-node">3</b></span>
-    
-    
-  </footer>
-</article>
-<article class="repo reveal" data-kind="samples">
-  <a class="repo-cover" href="https://github.com/amin-abbasi/node-public-private-key" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/node-public-private-key.svg" alt="" width="640" height="336" loading="lazy"></a>
-  <div class="repo-body">
-    <p class="kind">Samples</p>
-    <h3><a href="https://github.com/amin-abbasi/node-public-private-key" rel="noopener" target="_blank">Service-to-service keys</a></h3>
-    <p class="repo-path">amin-abbasi/node-public-private-key</p>
-    <p>Services that trust each other through RSA key pairs, in TypeScript and Express.</p>
-    <ul class="chips"><li class="tag">RSA</li><li class="tag">Security</li></ul>
-  </div>
-  <footer class="repo-foot">
-    <span class="lang"><i class="dot ts"></i>TypeScript</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/node-public-private-key">1</b></span>
-    
-    
-  </footer>
-</article>
-<article class="repo reveal" data-kind="samples">
-  <a class="repo-cover" href="https://github.com/amin-abbasi/rabbitmq-express" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/rabbitmq-express.svg" alt="" width="640" height="336" loading="lazy"></a>
-  <div class="repo-body">
-    <p class="kind">Samples</p>
-    <h3><a href="https://github.com/amin-abbasi/rabbitmq-express" rel="noopener" target="_blank">RPC over RabbitMQ</a></h3>
-    <p class="repo-path">amin-abbasi/rabbitmq-express</p>
-    <p>Request and reply between Express services over RabbitMQ queues.</p>
-    <ul class="chips"><li class="tag">RabbitMQ</li><li class="tag">RPC</li></ul>
-  </div>
-  <footer class="repo-foot">
-    <span class="lang"><i class="dot ts"></i>TypeScript</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/rabbitmq-express">1</b></span>
-    
-    
-  </footer>
-</article>
-<article class="repo reveal" data-kind="samples">
-  <a class="repo-cover" href="https://github.com/amin-abbasi/grpc-typescript-sample" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/grpc-typescript-sample.svg" alt="" width="640" height="336" loading="lazy"></a>
-  <div class="repo-body">
-    <p class="kind">Samples</p>
-    <h3><a href="https://github.com/amin-abbasi/grpc-typescript-sample" rel="noopener" target="_blank">gRPC in TypeScript</a></h3>
-    <p class="repo-path">amin-abbasi/grpc-typescript-sample</p>
-    <p>Typed gRPC services and clients in TypeScript.</p>
-    <ul class="chips"><li class="tag">gRPC</li><li class="tag">Protobuf</li></ul>
-  </div>
-  <footer class="repo-foot">
-    <span class="lang"><i class="dot ts"></i>TypeScript</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/grpc-typescript-sample">1</b></span>
-    
-    
-  </footer>
-</article>
-<article class="repo reveal" data-kind="samples">
-  <a class="repo-cover" href="https://github.com/amin-abbasi/hd-wallet-address" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/hd-wallet-address.svg" alt="" width="640" height="336" loading="lazy"></a>
-  <div class="repo-body">
-    <p class="kind">Samples</p>
-    <h3><a href="https://github.com/amin-abbasi/hd-wallet-address" rel="noopener" target="_blank">HD wallet addresses</a></h3>
-    <p class="repo-path">amin-abbasi/hd-wallet-address</p>
-    <p>A small Flask service that derives addresses from a hierarchical deterministic wallet.</p>
-    <ul class="chips"><li class="tag">Flask</li><li class="tag">Crypto</li></ul>
-  </div>
-  <footer class="repo-foot">
-    <span class="lang"><i class="dot py"></i>Python</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/hd-wallet-address">1</b></span>
-    
-    
-  </footer>
-</article>
-<article class="repo reveal" data-kind="samples">
-  <a class="repo-cover" href="https://github.com/amin-abbasi/node-chat" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true"><img src="assets/img/covers/node-chat.svg" alt="" width="640" height="336" loading="lazy"></a>
-  <div class="repo-body">
-    <p class="kind">Samples</p>
-    <h3><a href="https://github.com/amin-abbasi/node-chat" rel="noopener" target="_blank">Real-time chat</a></h3>
-    <p class="repo-path">amin-abbasi/node-chat</p>
-    <p>A chat with Node.js, Socket.IO, Redis and React.</p>
-    <ul class="chips"><li class="tag">Socket.IO</li><li class="tag">Redis</li><li class="tag">React</li></ul>
-  </div>
-  <footer class="repo-foot">
-    <span class="lang"><i class="dot js"></i>JavaScript</span>
-    <span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><b data-stars="amin-abbasi/node-chat">1</b></span>
-    
-    
   </footer>
 </article></div>
-    <div class="repo-more" data-group>
-      <h3 class="sub-head">More repositories</h3>
-      <ul class="repo-list">
-<li class="repo-row" data-kind="samples">
-  <div><h4><a href="https://github.com/amin-abbasi/grpc-sample" rel="noopener" target="_blank">gRPC in Node.js</a></h4><p>A gRPC server and client in plain JavaScript.</p></div>
-  <span class="repo-path">grpc-sample</span>
-  <span class="lang"><i class="dot js"></i>JavaScript</span>
-  <span class="row-kind">Samples</span>
-</li>
-<li class="repo-row" data-kind="samples">
-  <div><h4><a href="https://github.com/amin-abbasi/todo-list-js-mongodb" rel="noopener" target="_blank">To-do list</a></h4><p>A REST API in Node.js and MongoDB with a React client.</p></div>
-  <span class="repo-path">todo-list-js-mongodb</span>
-  <span class="lang"><i class="dot js"></i>JavaScript</span>
-  <span class="row-kind">Samples</span>
-</li>
-<li class="repo-row" data-kind="challenges">
-  <div><h4><a href="https://github.com/amin-abbasi/contact-service" rel="noopener" target="_blank">Contacts service</a></h4><p>NestJS and PostgreSQL, with unit and end-to-end tests.</p></div>
-  <span class="repo-path">contact-service</span>
-  <span class="lang"><i class="dot ts"></i>TypeScript</span>
-  <span class="row-kind">Coding challenges</span>
-</li>
-<li class="repo-row" data-kind="challenges">
-  <div><h4><a href="https://github.com/amin-abbasi/fashion-cloud-cache-api" rel="noopener" target="_blank">Cache API</a></h4><p>A cache with expiry over Express and MongoDB, with Jest tests and an OpenAPI description.</p></div>
-  <span class="repo-path">fashion-cloud-cache-api</span>
-  <span class="lang"><i class="dot ts"></i>TypeScript</span>
-  <span class="row-kind">Coding challenges</span>
-</li>
-<li class="repo-row" data-kind="challenges">
-  <div><h4><a href="https://github.com/amin-abbasi/fashion-cloud-test" rel="noopener" target="_blank">Cache service</a></h4><p>A second take on the cache, configured per environment, with Jest tests.</p></div>
-  <span class="repo-path">fashion-cloud-test</span>
-  <span class="lang"><i class="dot ts"></i>TypeScript</span>
-  <span class="row-kind">Coding challenges</span>
-</li>
-<li class="repo-row" data-kind="challenges">
-  <div><h4><a href="https://github.com/amin-abbasi/grocery-store-service" rel="noopener" target="_blank">Grocery store network</a></h4><p>Stores, employees and managers in a hierarchy, over Express, MongoDB and Redis.</p></div>
-  <span class="repo-path">grocery-store-service</span>
-  <span class="lang"><i class="dot ts"></i>TypeScript</span>
-  <span class="row-kind">Coding challenges</span>
-</li>
-<li class="repo-row" data-kind="challenges">
-  <div><h4><a href="https://github.com/amin-abbasi/clipboard-health-test" rel="noopener" target="_blank">Ticket breakdown and refactoring</a></h4><p>A feature broken into tickets, and a function refactored under its tests.</p></div>
-  <span class="repo-path">clipboard-health-test</span>
-  <span class="lang"><i class="dot js"></i>JavaScript</span>
-  <span class="row-kind">Coding challenges</span>
-</li></ul>
-    </div>
-    <p class="more"><a href="https://github.com/amin-abbasi?tab=repositories" rel="noopener" target="_blank">All of them on GitHub<svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></p>
+    <p class="more"><a href="https://github.com/amin-abbasi?tab=repositories" rel="noopener" target="_blank">Every repository on GitHub<svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></p>
   </div>
 </section>
 

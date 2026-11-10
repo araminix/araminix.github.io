@@ -1,4 +1,4 @@
-// The theme switch, the phone menu, the repository filter, reveals on scroll, and live counts from GitHub and npm.
+// The theme switch, the phone menu, reveals on scroll, and live counts from GitHub and npm.
 
 const root = document.documentElement;
 const dark = () => root.dataset.theme === "dark" || (!root.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
@@ -26,20 +26,6 @@ const nav = document.getElementById("nav");
 const onScroll = () => nav?.classList.toggle("scrolled", scrollY > 8);
 addEventListener("scroll", onScroll, { passive: true });
 onScroll();
-
-// Show the repositories of one kind; a group left with none is hidden
-const filters = [...document.querySelectorAll(".filter")];
-for (const button of filters) {
-    button.addEventListener("click", () => {
-        const wanted = button.dataset.filter;
-        for (const other of filters) {
-            other.classList.toggle("on", other === button);
-            other.setAttribute("aria-pressed", String(other === button));
-        }
-        for (const repo of document.querySelectorAll("[data-kind]")) repo.hidden = wanted !== "all" && repo.dataset.kind !== wanted;
-        for (const group of document.querySelectorAll("[data-group]")) group.hidden = !group.querySelector("[data-kind]:not([hidden])");
-    });
-}
 
 // Reveal on scroll
 const reveals = document.querySelectorAll(".reveal");

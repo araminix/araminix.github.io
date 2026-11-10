@@ -7,16 +7,15 @@ export const site = {
     tagline: "Where serenity meets speed.",
     summary:
         "Araminix is the open-source work of Amin Abbasi in one place: zero-crash streaming runtimes, real-time actor platforms, software for power plants, and ten years of backend architecture in libraries, studies and starters. Typed end to end, tested at every level and documented like products.",
-    description: "Araminix is Amin Abbasi's open-source work: plantline, @araminix/platform and @araminix/lib, and two dozen more repositories of libraries, architecture studies and starters.",
+    description: "Araminix is Amin Abbasi's open-source work: plantline, @araminix/platform and @araminix/lib, the gach library, micro-service starters and architecture studies.",
     location: "Türkiye",
 };
 
-/** The hero's numbers; `repos` is counted by the build (the products and the repositories below). */
 export const stats = [
     { value: "3", label: "flagship products" },
-    { value: "repos", label: "open-source repositories" },
-    { value: "2.7k+", label: "npm downloads last month", live: "npm-total" },
+    { value: "2.6k+", label: "npm downloads last month", live: "npm-total" },
     { value: "390+", label: "automated tests in the products" },
+    { value: "10+", label: "years building backends" },
 ];
 
 /** The three products, largest story first. `media` names a picture set or an illustration in art.mjs. */
@@ -117,44 +116,62 @@ export const stack = [
     ["Domains", ["Power plants and grids", "CAD and GIS", "ERP and MES", "Trading and wallets", "Healthcare (FHIR)", "CRM and social networks", "Video calls"]],
 ];
 
-/** The kinds of repository, in the order of the filters. */
-export const kinds = [
-    ["tools", "Libraries and tools"],
-    ["studies", "Studies"],
-    ["starters", "Starters"],
-    ["samples", "Samples"],
-    ["challenges", "Coding challenges"],
+/** The open-source library and starters, shown like the products. */
+export const featured = [
+    {
+        id: "gach",
+        name: "gach",
+        kind: "npm package · Terminal output",
+        tagline: "Chainable colours and styles for terminal text.",
+        text: "A small TypeScript library for colouring console output: named colours, RGB and hex, bold, italic, underline and more, chained on one call. Types included and nothing else to install. It colours the logs of @araminix/lib, both micro-service starters and the Node.js performance study.",
+        points: [
+            ["One chain", "color and bgColor by name, rgb and hex, bold, italic, underline, strikethrough and inverse, each returning the same object, and reset to start again."],
+            ["Presets", "success, error, warning and rainbow for the usual messages, and customStyle to set several at once."],
+            ["Typed, no dependencies", "Written in TypeScript with its declarations; colour names are checked by the compiler and wrong values are reported, not thrown."],
+            ["In use since 2021", "17 releases on npm and about 3,700 downloads in the last year."],
+        ],
+        tech: ["TypeScript", "ANSI escape codes", "Node.js", "npm"],
+        links: [
+            { label: "npm", href: "https://www.npmjs.com/package/gach", primary: true, icon: "package" },
+            { label: "Source", href: "https://github.com/amin-abbasi/gach", icon: "github" },
+        ],
+        repo: "amin-abbasi/gach",
+        npm: "gach",
+        version: "1.7.5",
+        media: "gach",
+    },
+    {
+        id: "boilerplates",
+        name: "Micro-service boilerplates",
+        kind: "Starters · TypeScript and JavaScript",
+        tagline: "A layered Express service to start from, in TypeScript or JavaScript.",
+        text: "Two starters for REST micro-services on Express 5, built up over six years. Each request passes the same layers: security middlewares, routes, validation, controllers, services and repositories, with the database behind one interface. The TypeScript one is kept as a reference architecture; the JavaScript one is maintained.",
+        points: [
+            ["Layered", "Routes, validators, controllers, services and repositories, each in its own folder; validation with Zod (TypeScript) or Joi (JavaScript)."],
+            ["Your database", "MongoDB with Mongoose, or MySQL and PostgreSQL with TypeORM, behind the same repository interface; Redis for caching."],
+            ["Production basics", "Helmet, CORS, rate limiting, JWT sign-in with roles, request logs, one error format and messages in English and Persian."],
+            ["Documented and real-time", "OpenAPI (Swagger) pages from the routes, and Socket.IO ready to switch on."],
+            ["Tested and containerised", "Jest and Supertest; the TypeScript one runs its integration tests against MongoDB and MySQL in Docker Compose, in CI on GitHub Actions."],
+        ],
+        tech: ["Node.js", "Express 5", "TypeScript", "JavaScript", "MongoDB", "TypeORM", "Redis", "Socket.IO", "OpenAPI", "Jest", "Docker"],
+        links: [
+            { label: "TypeScript", href: "https://github.com/amin-abbasi/typescript-boilerplate", primary: true, icon: "github" },
+            { label: "JavaScript", href: "https://github.com/amin-abbasi/javascript-boilerplate", icon: "github" },
+        ],
+        repos: [
+            ["amin-abbasi/typescript-boilerplate", "TypeScript", 42],
+            ["amin-abbasi/javascript-boilerplate", "JavaScript", 4],
+        ],
+        media: "boilerplates",
+    },
 ];
 
-/**
- * The public repositories of github.com/amin-abbasi, the account Araminix is run from (forks and placeholders left
- * out), most useful first. `icon` and `tone` draw a card's cover; entries without them are listed in the compact
- * table under the cards.
- */
+/** More repositories of github.com/amin-abbasi, the account Araminix belongs to: studies from real work and a Go starter. */
 export const repos = [
-    { repo: "amin-abbasi/typescript-boilerplate", kind: "starters", title: "TypeScript micro-service boilerplate", text: "A layered micro-service starter with Express, MongoDB, MySQL, Redis, Docker and OpenAPI, kept as a reference for hand-built TypeScript architecture.", language: "TypeScript", tags: ["Express", "MongoDB", "Redis", "Docker"], stars: 42, icon: "layers", tone: "ts" },
-    { repo: "amin-abbasi/arango-edge-patterns", kind: "studies", title: "ArangoDB edge patterns for ERP", text: "Graph patterns from real ERP systems: category trees, warehouse hierarchies and traversals on ArangoDB edge collections, with the article that explains them.", language: "TypeScript", tags: ["ArangoDB", "Graphs", "ERP"], stars: 2, icon: "waypoints", tone: "graph", extra: { label: "Article on DEV", href: "https://dev.to/amin4193/escaping-recursive-hell-building-erp-hierarchies-with-arangodb-edges-751" } },
-    { repo: "amin-abbasi/node-performance-gotchas", kind: "studies", title: "The Leaky Pipe: Node.js performance gotchas", text: "Memory leaks, event-loop blocking and stream backpressure, each with the problem and the fix side by side and measured.", language: "TypeScript", tags: ["Node.js", "V8", "Streams"], stars: 3, icon: "gauge", tone: "perf" },
-    { repo: "amin-abbasi/system-design-flash-sale", kind: "studies", title: "FlashScale: a flash-sale system design", text: "Sharding, cache-aside and load balancing that survive a Black Friday spike, runnable locally with live metrics.", language: "TypeScript", tags: ["Sharding", "Caching", "Load balancing"], stars: 1, icon: "shopping-cart", tone: "sale" },
-    { repo: "amin-abbasi/gach", kind: "tools", title: "gach: terminal colours", text: "Chainable ANSI styling for JavaScript and TypeScript consoles: colours, RGB and hex, styles and resets. Used by @araminix/lib.", language: "TypeScript", tags: ["npm", "CLI"], stars: 2, icon: "square-terminal", tone: "term", npm: "gach" },
-    { repo: "amin-abbasi/amin-abbasi.github.io", kind: "tools", title: "An architect's portfolio engine", text: "The personal site behind amin-abbasi.github.io: React 19 pre-rendered for search engines, a skill graph from one JSON file, English and Turkish, and a private analytics dashboard. Made to be forked.", language: "TypeScript", tags: ["React 19", "Vite", "SSG"], stars: 1, icon: "globe", tone: "site", extra: { label: "Open the site", href: "https://amin-abbasi.github.io/" } },
-    { repo: "amin-abbasi/irtm-logs", kind: "tools", title: "irtm-logs: request logs for micro-services", text: "An npm package that records each endpoint's request and response, with the object it acted on, across every micro-service of a system.", language: "JavaScript", tags: ["npm", "Logging", "Micro-services"], stars: 2, icon: "list-checks", tone: "logs", npm: "irtm-logs" },
-    { repo: "amin-abbasi/javascript-boilerplate", kind: "starters", title: "JavaScript micro-service boilerplate", text: "Express, MongoDB, Redis, Socket.IO and OpenAPI with Jest tests and asynchronous logging.", language: "JavaScript", tags: ["Express", "Socket.IO", "Jest"], stars: 4, icon: "boxes", tone: "js" },
-    { repo: "amin-abbasi/go-boilerplate", kind: "starters", title: "Go server boilerplate", text: "A Go service with the Echo framework, MongoDB, Redis and JWT authentication.", language: "Go", tags: ["Echo", "MongoDB", "JWT"], stars: 2, icon: "server", tone: "go" },
-    { repo: "amin-abbasi/go-server", kind: "starters", title: "Go HTTP servers: Gin, Fiber and Echo", text: "The same small server in the standard library and, one branch each, in Gin, Fiber and Echo, to compare the frameworks side by side.", language: "Go", tags: ["net/http", "Gin", "Fiber", "Echo"], stars: 1, icon: "git-branch", tone: "goalt" },
-    { repo: "amin-abbasi/open-vidu-node", kind: "samples", title: "Video calls with OpenVidu", text: "WebRTC video calls with an OpenVidu server and a Node.js backend, run with Docker Compose.", language: "JavaScript", tags: ["WebRTC", "OpenVidu"], stars: 3, icon: "video", tone: "video" },
-    { repo: "amin-abbasi/node-public-private-key", kind: "samples", title: "Service-to-service keys", text: "Services that trust each other through RSA key pairs, in TypeScript and Express.", language: "TypeScript", tags: ["RSA", "Security"], stars: 1, icon: "key-round", tone: "key" },
-    { repo: "amin-abbasi/rabbitmq-express", kind: "samples", title: "RPC over RabbitMQ", text: "Request and reply between Express services over RabbitMQ queues.", language: "TypeScript", tags: ["RabbitMQ", "RPC"], stars: 1, icon: "rabbit", tone: "mq" },
-    { repo: "amin-abbasi/grpc-typescript-sample", kind: "samples", title: "gRPC in TypeScript", text: "Typed gRPC services and clients in TypeScript.", language: "TypeScript", tags: ["gRPC", "Protobuf"], stars: 1, icon: "arrow-left-right", tone: "grpc" },
-    { repo: "amin-abbasi/hd-wallet-address", kind: "samples", title: "HD wallet addresses", text: "A small Flask service that derives addresses from a hierarchical deterministic wallet.", language: "Python", tags: ["Flask", "Crypto"], stars: 1, icon: "wallet", tone: "py" },
-    { repo: "amin-abbasi/node-chat", kind: "samples", title: "Real-time chat", text: "A chat with Node.js, Socket.IO, Redis and React.", language: "JavaScript", tags: ["Socket.IO", "Redis", "React"], stars: 1, icon: "messages-square", tone: "chat" },
-    { repo: "amin-abbasi/grpc-sample", kind: "samples", title: "gRPC in Node.js", text: "A gRPC server and client in plain JavaScript.", language: "JavaScript", stars: 1 },
-    { repo: "amin-abbasi/todo-list-js-mongodb", kind: "samples", title: "To-do list", text: "A REST API in Node.js and MongoDB with a React client.", language: "JavaScript", stars: 3 },
-    { repo: "amin-abbasi/contact-service", kind: "challenges", title: "Contacts service", text: "NestJS and PostgreSQL, with unit and end-to-end tests.", language: "TypeScript", stars: 1 },
-    { repo: "amin-abbasi/fashion-cloud-cache-api", kind: "challenges", title: "Cache API", text: "A cache with expiry over Express and MongoDB, with Jest tests and an OpenAPI description.", language: "TypeScript", stars: 2 },
-    { repo: "amin-abbasi/fashion-cloud-test", kind: "challenges", title: "Cache service", text: "A second take on the cache, configured per environment, with Jest tests.", language: "TypeScript", stars: 0 },
-    { repo: "amin-abbasi/grocery-store-service", kind: "challenges", title: "Grocery store network", text: "Stores, employees and managers in a hierarchy, over Express, MongoDB and Redis.", language: "TypeScript", stars: 1 },
-    { repo: "amin-abbasi/clipboard-health-test", kind: "challenges", title: "Ticket breakdown and refactoring", text: "A feature broken into tickets, and a function refactored under its tests.", language: "JavaScript", stars: 0 },
+    { repo: "amin-abbasi/arango-edge-patterns", kind: "Study", title: "ArangoDB edge patterns for ERP", text: "Graph patterns from real ERP systems: category trees, warehouse hierarchies and traversals on ArangoDB edge collections, tested against a real database, with the article that explains them.", language: "TypeScript", tags: ["ArangoDB", "Graphs", "ERP", "Jest"], stars: 2, icon: "waypoints", tone: "graph", extra: { label: "Article on DEV", href: "https://dev.to/amin4193/escaping-recursive-hell-building-erp-hierarchies-with-arangodb-edges-751" } },
+    { repo: "amin-abbasi/node-performance-gotchas", kind: "Study", title: "The Leaky Pipe: Node.js performance gotchas", text: "Memory leaks, event-loop blocking and stream backpressure, each as a problem endpoint and a fixed one, with scripts that load them and show the difference.", language: "TypeScript", tags: ["Node.js", "V8", "Streams"], stars: 3, icon: "gauge", tone: "perf" },
+    { repo: "amin-abbasi/system-design-flash-sale", kind: "Study", title: "FlashScale: a flash-sale system design", text: "Sharding, cache-aside and load balancing simulated in one process, with stress tests from ten thousand to a million orders.", language: "TypeScript", tags: ["Sharding", "Caching", "Load balancing"], stars: 1, icon: "shopping-cart", tone: "sale" },
+    { repo: "amin-abbasi/go-boilerplate", kind: "Starter", title: "Go server boilerplate", text: "A Go service with the Echo framework, MongoDB, Redis and JWT authentication, run with Docker and live reload.", language: "Go", tags: ["Echo", "MongoDB", "JWT", "Docker"], stars: 2, icon: "server", tone: "go" },
 ];
 
 export const writing = [

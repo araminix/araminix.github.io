@@ -83,6 +83,9 @@ const TONES = {
     grpc: ["#0d9488", "#0369a1"],
     py: ["#1d4ed8", "#a16207"],
     chat: ["#059669", "#0284c7"],
+    site: ["#0d9488", "#7c3aed"],
+    logs: ["#475569", "#0369a1"],
+    goalt: ["#0e7490", "#4338ca"],
 };
 
 /** A repository's cover: its tone, a dot grid, its icon large, and its name. Standalone SVG, so it sets its own colours. */

@@ -1,4 +1,4 @@
-// The theme switch, the phone menu, the language filter, reveals on scroll, and live counts from GitHub and npm.
+// The theme switch, the phone menu, the repository filter, reveals on scroll, and live counts from GitHub and npm.
 
 const root = document.documentElement;
 const dark = () => root.dataset.theme === "dark" || (!root.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
@@ -27,7 +27,7 @@ const onScroll = () => nav?.classList.toggle("scrolled", scrollY > 8);
 addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
-// Filter the repositories by language
+// Show the repositories of one kind; a group left with none is hidden
 const filters = [...document.querySelectorAll(".filter")];
 for (const button of filters) {
     button.addEventListener("click", () => {
@@ -36,7 +36,8 @@ for (const button of filters) {
             other.classList.toggle("on", other === button);
             other.setAttribute("aria-pressed", String(other === button));
         }
-        for (const repo of document.querySelectorAll(".repo")) repo.hidden = wanted !== "all" && repo.dataset.lang !== wanted;
+        for (const repo of document.querySelectorAll("[data-kind]")) repo.hidden = wanted !== "all" && repo.dataset.kind !== wanted;
+        for (const group of document.querySelectorAll("[data-group]")) group.hidden = !group.querySelector("[data-kind]:not([hidden])");
     });
 }
 
@@ -88,7 +89,7 @@ const show = (element, count) => {
 };
 
 async function stars() {
-    const owners = ["orgs/araminix", "users/amin-abbasi", "users/amin-euro"];
+    const owners = ["orgs/araminix", "users/amin-abbasi"];
     const lists = await Promise.all(
         owners.map((owner) =>
             cached(`stars:${owner}`, async () => {

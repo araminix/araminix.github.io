@@ -274,7 +274,7 @@ h1 { font-size: clamp(44px, 6.4vw, 80px); font-weight: 800; letter-spacing: -0.0
 /* ---------- Technology ---------- */
 .stack { display: grid; gap: 4px; }
 .stack-row { display: grid; grid-template-columns: 240px 1fr; align-items: center; gap: 20px; padding: 18px 0; border-top: 1px solid var(--line); }
-.stack-row h3 { font-size: 17px; }
+.stack-row h4 { margin: 0; font-size: 17px; }
 .stack-row .chips { margin: 0; }
 @media (max-width: 700px) { .stack-row { grid-template-columns: 1fr; gap: 10px; } }
 
@@ -282,6 +282,9 @@ h1 { font-size: clamp(44px, 6.4vw, 80px); font-weight: 800; letter-spacing: -0.0
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
 .filter { display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 16px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); color: var(--muted); font: 600 14px Inter, system-ui, sans-serif; cursor: pointer; }
 .filter.on { border-color: transparent; background: var(--ink); color: var(--bg); }
+.filter .count { min-width: 22px; padding: 1px 7px; border-radius: 999px; background: var(--card-2); color: var(--muted); font-size: 12.5px; }
+.filter.on .count { background: rgb(127 127 127 / 0.28); color: inherit; }
+[data-group][hidden] { display: none; }
 .grid.repos { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 960px) { .grid.repos { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 620px) { .grid.repos { grid-template-columns: 1fr; } }
@@ -290,6 +293,7 @@ h1 { font-size: clamp(44px, 6.4vw, 80px); font-weight: 800; letter-spacing: -0.0
 .repo[hidden] { display: none; }
 .repo-cover img { display: block; width: 100%; aspect-ratio: 640 / 336; object-fit: cover; }
 .repo-body { flex: 1; padding: 20px 22px 6px; }
+.repo-body .kind { margin-bottom: 6px; font-size: 12px; }
 .repo h3 { font-size: 18px; }
 .repo h3 a { text-decoration: none; }
 .repo h3 a:hover { color: var(--accent); }
@@ -302,6 +306,24 @@ h1 { font-size: clamp(44px, 6.4vw, 80px); font-weight: 800; letter-spacing: -0.0
 .repo-foot b { color: var(--ink); font-weight: 600; }
 .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
 .dot.ts { background: #3178c6; } .dot.js { background: #f1e05a; } .dot.go { background: #00add8; } .dot.cs { background: #9b4dca; } .dot.py { background: #3572a5; }
+/* The smaller repositories, one row each: what it is, its name, language and kind */
+.repo-more .sub-head { margin-top: 48px; }
+.repo-list { margin: 0; padding: 0; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); list-style: none; }
+.repo-row { display: grid; grid-template-columns: minmax(0, 1fr) 210px 110px 150px; gap: 20px; align-items: center; padding: 16px 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.repo-row:first-child { border-top: 0; }
+.repo-row[hidden] { display: none; }
+.repo-row h4 { margin: 0 0 2px; color: var(--ink); font-size: 16px; }
+.repo-row h4 a { text-decoration: none; }
+.repo-row h4 a:hover { color: var(--accent); }
+.repo-row p { margin: 0; font-size: 14.5px; }
+.repo-row .repo-path { margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.repo-row .lang { display: inline-flex; align-items: center; gap: 6px; }
+.row-kind { justify-self: end; padding: 3px 10px; border-radius: 999px; background: var(--card-2); font-size: 12.5px; white-space: nowrap; }
+@media (max-width: 860px) {
+    .repo-row { grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; }
+    .repo-row > div { grid-column: 1 / -1; }
+    .repo-row .repo-path { display: none; }
+}
 .more { margin-top: 28px; }
 .more a { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); font-weight: 650; text-decoration: none; }
 
@@ -322,14 +344,24 @@ h1 { font-size: clamp(44px, 6.4vw, 80px); font-weight: 800; letter-spacing: -0.0
 .portrait { padding: 6px; border-radius: 50%; background: var(--grad); box-shadow: var(--shadow-lg); }
 .portrait img { display: block; border-radius: 50%; border: 6px solid var(--bg-alt); }
 .role { margin: 10px 0 20px; color: var(--accent); font-weight: 650; }
-.founder p:not(.role):not(.eyebrow):not(.note) { max-width: 720px; color: var(--muted); font-size: 17.5px; }
+.founder > div > p:not(.role):not(.eyebrow) { max-width: 720px; color: var(--muted); font-size: 17.5px; }
 .accounts { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; margin: 24px 0 16px; padding: 0; list-style: none; }
 .accounts a { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); font-weight: 600; font-size: 15px; text-decoration: none; }
 .accounts a:hover { border-color: var(--accent); }
 .accounts a > span { display: grid; min-width: 0; }
 .accounts b { overflow-wrap: anywhere; }
 .accounts small { color: var(--muted); font-weight: 500; font-size: 13px; }
-.note { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 15px; }
+.founder .sub-head { margin: 40px 0 16px; font-size: 20px; }
+.numbers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin: 28px 0 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--line); }
+.numbers div { display: flex; flex-direction: column-reverse; padding: 16px 18px; background: var(--card); }
+.numbers dt { color: var(--muted); font-size: 13.5px; }
+.numbers dd { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.03em; }
+.highlights { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.highlights li { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; color: var(--muted); font-size: 16px; }
+.highlights .icon { margin-top: 2px; color: var(--accent-2); }
+.founder .article { margin-bottom: 8px; }
+.founder .article h4 { margin: 0 0 8px; font-size: 19px; }
+@media (max-width: 620px) { .numbers { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 800px) { .founder { grid-template-columns: 1fr; gap: 28px; } .portrait { width: 200px; } }
 
 /* ---------- Contact and footer ---------- */

@@ -17,16 +17,18 @@ The build writes `index.html` and one cover picture per repository in `assets/im
 
 | File | Holds |
 | --- | --- |
-| `scripts/content.mjs` | Everything the page says: products, capabilities, the technology list, repositories, writing, the founder |
+| `scripts/content.mjs` | Everything the page says: products, repositories and their kinds, capabilities, the technology list, writing, the founder |
 | `scripts/build.mjs` | The page's markup |
 | `scripts/art.mjs` | The drawings: the hero, the package diagrams and the repository covers |
 | `scripts/icons.mjs` | The icons used (Lucide, and the GitHub mark) |
 | `assets/css/site.css` | All styles, light and dark |
 | `assets/js/theme.js` | Applies the chosen theme before the page draws |
-| `assets/js/site.js` | Theme switch, phone menu, language filter, and live star and download counts |
+| `assets/js/site.js` | Theme switch, phone menu, the repository filter, and live star and download counts |
 
-To add a repository, add an entry to `repos` with an `icon` from `scripts/icons.mjs` and a `tone` from `TONES` in
-`scripts/art.mjs`; the build draws its cover. To add an icon, copy its inner SVG from https://lucide.dev into
+To add a repository, add an entry to `repos` with its `kind` (one of `kinds`). With an `icon` from `scripts/icons.mjs`
+and a `tone` from `TONES` in `scripts/art.mjs` it is shown as a card and the build draws its cover; without them it is
+a row in the "More repositories" list. Every repository on the page is public on github.com/amin-abbasi, the account
+the Araminix organisation belongs to. To add an icon, copy its inner SVG from https://lucide.dev into
 `scripts/icons.mjs`.
 
 ## Looking at it locally

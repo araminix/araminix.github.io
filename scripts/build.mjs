@@ -17,7 +17,7 @@ const plantlineMedia = () => `
   <figure class="frame back"><img src="assets/img/plantline/layout.webp" alt="plantline's plant layout: a solar plant on satellite imagery with an inverter described" width="1440" height="900" loading="lazy"></figure>
   <figure class="frame front">
     <img class="only-light" src="assets/img/plantline/diagram.webp" alt="plantline's diagram editor: a solar plant's single-line diagram with a transformer's properties" width="1440" height="900" loading="lazy">
-    <img class="only-dark" src="assets/img/plantline/dark.webp" alt="plantline's diagram editor in the dark theme with the diagram's checks" width="1440" height="900" loading="lazy">
+    <img class="only-dark" src="assets/img/plantline/dark.webp" alt="plantline's diagram editor in the dark theme, its language list open: 14 languages, each with its flag" width="1440" height="900" loading="lazy">
   </figure>
   <figure class="frame phone"><img src="assets/img/plantline/phone.webp" alt="plantline on a phone, in Persian, right to left" width="412" height="839" loading="lazy"></figure>
 </div>`;

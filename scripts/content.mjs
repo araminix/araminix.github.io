@@ -27,10 +27,10 @@ export const products = [
         tagline: "Single-line diagrams and DWG/DXF plant layouts, in the browser.",
         text: "A free tool for the people who design, build and run power plants. Draw the plant's single-line diagram, open its AutoCAD drawing and see the plant on the map with its tables, inverters, turbines, towers and cables found and counted. No account and no server: drawings are read in the browser and never leave it.",
         points: [
-            ["A real diagram editor", "23 IEC 60617 symbols, drag and drop, connection points, shaped line routes, group editing, properties for every kind of equipment and design checks."],
+            ["A real diagram editor", "23 IEC 60617 symbols, drag and drop, connection points, shaped line routes, group editing, properties for every kind of equipment and design checks; a new diagram starts empty or from a ready example of its plant type."],
             ["AutoCAD in the browser", "DWG and DXF read by a .NET reader compiled ahead of time to WebAssembly: a 7.5 MB plant with 27,000 block copies opens in about 3.5 seconds."],
             ["On the map", "In the drawing's own coordinates (UTM or any proj4 system) or by a click; objects counted, lengths measured and capacity worked out from the modules."],
-            ["For everyone", "14 languages with Arabic and Persian right to left, counts and digits as each language writes them, keyboard and screen-reader use, light and dark themes, phones and tablets, and no tracking."],
+            ["For everyone", "14 languages, each with its flag, Arabic and Persian right to left, counts and digits as each language writes them, keyboard and screen-reader use, light and dark themes, phones and tablets, and no tracking."],
             ["Measured in CI", "Unit, reader and end-to-end tests on desktop and phone, with limits on reading time, memory and download size."],
         ],
         tech: ["React 19", "TypeScript", ".NET 10 → WebAssembly", "ACadSharp", "Leaflet", "proj4", "Vite", "Vitest", "Playwright"],
@@ -135,6 +135,7 @@ export const featured = [
         links: [
             { label: "npm", href: "https://www.npmjs.com/package/gach", primary: true, icon: "package" },
             { label: "Source", href: "https://github.com/amin-abbasi/gach", icon: "github" },
+            { label: "Changelog", href: "https://github.com/amin-abbasi/gach/blob/master/CHANGELOG.md", icon: "book-open" },
         ],
         repo: "amin-abbasi/gach",
         npm: "gach",
@@ -150,7 +151,7 @@ export const featured = [
         points: [
             ["Layered", "Routes, validators, controllers, services and repositories, each in its own folder; validation with Zod (TypeScript) or Joi (JavaScript)."],
             ["Your database", "MongoDB with Mongoose, or MySQL and PostgreSQL with TypeORM, behind the same repository interface; Redis for caching."],
-            ["Production basics", "Helmet, CORS, rate limiting, JWT sign-in with roles, request logs, one error format and messages in English and Persian."],
+            ["Production basics", "Helmet, CORS, rate limiting, JWT sign-in with roles, request logs, one error format and messages in English and Persian. No keys in the repository: one command makes a certificate for local HTTPS."],
             ["Documented and real-time", "OpenAPI (Swagger) pages from the routes, and Socket.IO ready to switch on."],
             ["Tested and containerised", "Jest and Supertest; the TypeScript one runs its integration tests against MongoDB and MySQL in Docker Compose, in CI on GitHub Actions."],
         ],

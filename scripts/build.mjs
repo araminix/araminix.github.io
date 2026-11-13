@@ -22,6 +22,16 @@ const plantlineMedia = () => `
   <figure class="frame phone"><img src="assets/img/plantline/phone.webp" alt="plantline on a phone, in Persian, right to left" width="412" height="839" loading="lazy"></figure>
 </div>`;
 
+const gridlingoMedia = () => `
+<div class="shots">
+  <figure class="frame back"><img src="assets/img/gridlingo/library.webp" alt="Gridlingo's home page: 48 protocols in seven groups, beside a small energy site" width="1440" height="900" loading="lazy"></figure>
+  <figure class="frame front">
+    <img class="only-light" src="assets/img/gridlingo/lesson.webp" alt="A Gridlingo lesson on IEC 61850 GOOSE: a protection relay announces a trip to every subscriber across the substation" width="1440" height="900" loading="lazy">
+    <img class="only-dark" src="assets/img/gridlingo/lesson-dark.webp" alt="The same GOOSE lesson in the dark theme" width="1440" height="900" loading="lazy">
+  </figure>
+  <figure class="frame phone"><img src="assets/img/gridlingo/phone.webp" alt="A Gridlingo lesson on IEC 60870-5-104 on a phone, in Persian, right to left" width="412" height="839" loading="lazy"></figure>
+</div>`;
+
 const libCode = `<pre class="code" aria-label="A stream opened over a socket"><code><span class="k">const</span> socket = (<span class="k">await</span> client.<span class="f">connect</span>(<span class="s">'chat'</span>, <span class="s">'room-42'</span>)).<span class="f">unwrap</span>();
 <span class="k">const</span> opened = <span class="k">await</span> socket.<span class="f">outgoingStream</span>&lt;<span class="t">Topic</span>, <span class="t">string</span>, <span class="t">string</span>&gt;(
     <span class="s">'ask'</span>, { topic: <span class="s">'weather'</span> });
@@ -55,6 +65,7 @@ console.<span class="f">log</span>(<span class="f">gach</span>(<span class="s">'
 
 const media = {
     plantline: plantlineMedia,
+    gridlingo: gridlingoMedia,
     platform: () => `<div class="art-card">${platformArt()}</div>`,
     lib: () => `<div class="art-card">${libArt()}${libCode}</div>`,
     gach: gachMedia,
@@ -171,9 +182,9 @@ const html = `<!doctype html>
 
 <section class="section" id="products">
   <div class="wrap">
-    <header class="section-head"><p class="eyebrow">Products</p><h2>Three products, one standard</h2><p>A tool engineers use every day, and the runtime and protocol underneath real-time applications: each built to the same bar of typing, testing and documentation.</p></header>
+    <header class="section-head"><p class="eyebrow">Products</p><h2>Four products, one standard</h2><p>Two tools for the people who build and run the grid, and the runtime and protocol underneath real-time applications: each built to the same bar of typing, testing and documentation.</p></header>
     ${products.map(productBlock).join("")}
-    <aside class="stack-note reveal">${icon("workflow", 22)}<p><b>How they fit together.</b> <code>@araminix/lib</code> is the wire: typed streams over one WebSocket, in the browser and in Node.js. <code>@araminix/platform</code> is the server built on it: apps in their own workers, a server-driven UI, and agents for devices and services. plantline shows the same care in a product engineers use directly.</p></aside>
+    <aside class="stack-note reveal">${icon("workflow", 22)}<p><b>How they fit together.</b> <code>@araminix/lib</code> is the wire: typed streams over one WebSocket, in the browser and in Node.js. <code>@araminix/platform</code> is the server built on it: apps in their own workers, a server-driven UI, and agents for devices and services. plantline and Gridlingo show the same care in products engineers use directly.</p></aside>
   </div>
 </section>
 
@@ -231,7 +242,7 @@ const html = `<!doctype html>
   <div class="wrap footer-in">
     <a class="brand" href="#top"><img src="assets/img/icon-64.png" width="28" height="28" alt="">Araminix</a>
     <p>© <span id="year">2026</span> Araminix · No trackers, no cookies. Star and download counts come live from GitHub and npm.</p>
-    <nav aria-label="Elsewhere"><a href="${site.github}" rel="noopener" target="_blank">GitHub</a><a href="https://www.npmjs.com/org/araminix" rel="noopener" target="_blank">npm</a><a href="https://araminix.github.io/plantline/">plantline</a><a href="https://amin-abbasi.github.io/" rel="noopener" target="_blank">Amin Abbasi</a></nav>
+    <nav aria-label="Elsewhere"><a href="${site.github}" rel="noopener" target="_blank">GitHub</a><a href="https://www.npmjs.com/org/araminix" rel="noopener" target="_blank">npm</a><a href="https://araminix.github.io/plantline/">plantline</a><a href="https://araminix.github.io/gridlingo/">Gridlingo</a><a href="https://amin-abbasi.github.io/" rel="noopener" target="_blank">Amin Abbasi</a></nav>
   </div>
 </footer>
 </body>

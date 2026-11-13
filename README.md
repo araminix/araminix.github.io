@@ -2,8 +2,8 @@
   <a href="https://araminix.github.io/"><img src="assets/img/og.png" alt="Araminix: where serenity meets speed. plantline, @araminix/platform and @araminix/lib" width="720"></a>
 </p>
 
-> **The Araminix website: the open-source work of Amin Abbasi in one place, from software for power plants to
-> real-time runtimes, libraries and starters.**
+> **The Araminix website: the open-source work of Amin Abbasi in one place, from software for power plants and
+> the protocols they speak to real-time runtimes, libraries and starters.**
 
 [![Website](https://img.shields.io/badge/website-araminix.github.io-7c3aed.svg)](https://araminix.github.io/)
 [![Pages](https://github.com/araminix/araminix.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/araminix/araminix.github.io/actions/workflows/pages/pages-build-deployment)
@@ -16,6 +16,7 @@
 | Project | What it is | Links |
 | --- | --- | --- |
 | [plantline](https://araminix.github.io/#plantline) | Single-line diagrams and DWG/DXF plant layouts in the browser, for solar, wind, storage, hydro and grid projects | [Open the app](https://araminix.github.io/plantline/) · [Source](https://github.com/araminix/plantline) |
+| [Gridlingo](https://araminix.github.io/#gridlingo) | Learn how energy devices talk: 48 grid protocols played step by step between real devices, every byte explained, in 14 languages | [Start learning](https://araminix.github.io/gridlingo/) · [Source](https://github.com/araminix/gridlingo) |
 | [@araminix/platform](https://araminix.github.io/#platform) | An actor-based application runtime and WebSocket platform for Node.js | [npm](https://www.npmjs.com/package/@araminix/platform) · [Source](https://github.com/araminix/platform) |
 | [@araminix/lib](https://araminix.github.io/#lib) | Universal, type-safe multiplexed WebSocket streaming | [npm](https://www.npmjs.com/package/@araminix/lib) · [Source](https://github.com/araminix/lib) |
 | [gach](https://araminix.github.io/#gach) | Chainable colours and styles for terminal text | [npm](https://www.npmjs.com/package/gach) · [Source](https://github.com/amin-abbasi/gach) |

@@ -6,19 +6,19 @@ export const site = {
     github: "https://github.com/araminix",
     tagline: "Where serenity meets speed.",
     summary:
-        "Araminix is the open-source work of Amin Abbasi in one place: zero-crash streaming runtimes, real-time actor platforms, software for power plants, and ten years of backend architecture in libraries, studies and starters. Typed end to end, tested at every level and documented like products.",
-    description: "Araminix is Amin Abbasi's open-source work: plantline, @araminix/platform and @araminix/lib, the gach library, micro-service starters and architecture studies.",
+        "Araminix is the open-source work of Amin Abbasi in one place: zero-crash streaming runtimes, real-time actor platforms, software for power plants and the protocols they speak, and ten years of backend architecture in libraries, studies and starters. Typed end to end, tested at every level and documented like products.",
+    description: "Araminix is Amin Abbasi's open-source work: plantline, Gridlingo, @araminix/platform and @araminix/lib, the gach library, micro-service starters and architecture studies.",
     location: "Türkiye",
 };
 
 export const stats = [
-    { value: "3", label: "flagship products" },
+    { value: "4", label: "flagship products" },
     { value: "2.6k+", label: "npm downloads last month", live: "npm-total" },
-    { value: "390+", label: "automated tests in the products" },
+    { value: "1,800+", label: "automated tests in the products" },
     { value: "10+", label: "years building backends" },
 ];
 
-/** The three products, largest story first. `media` names a picture set or an illustration in art.mjs. */
+/** The four products, largest story first. `media` names a picture set or an illustration in art.mjs. */
 export const products = [
     {
         id: "plantline",
@@ -41,6 +41,28 @@ export const products = [
         repo: "araminix/plantline",
         version: "0.7.0",
         media: "plantline",
+    },
+    {
+        id: "gridlingo",
+        name: "Gridlingo",
+        kind: "Web app · Learning energy protocols",
+        tagline: "How energy devices talk, explained visually, byte by byte.",
+        text: "A free, visual way to learn the protocols of the grid, from IEC 61850 GOOSE and IEC 60870-5-104 to DNP3, Modbus, OCPP, DLMS/COSEM, PROFINET and Zigbee Smart Energy. Each lesson plays a real exchange between real devices: watch the messages travel across the site, step by step, then open any message and read every byte. For engineers, students and anyone curious, with plain words for beginners.",
+        points: [
+            ["48 protocols, one way to learn", "Substations, control centres, plants, EV charging, metering, IoT and security, each told as a short story between devices you can recognise."],
+            ["Watch it happen", "The messages travel across an isometric site, one after another; the same exchange is also shown as a sequence, a single-line diagram for substations and a timing chart."],
+            ["Every byte explained", "Each message taken apart in colour, field by field, with names and addresses broken down; the bytes are proven by tests, and where they are not certain the lesson says so in words."],
+            ["Try it yourself", "Turn a value into its bytes in every byte order, explore an IEC 61850 SCL file, set an EV charger's pilot signal, compare protocols side by side, and look up 470+ terms."],
+            ["For everyone", "14 languages, Arabic and Persian right to left, technical or plain words, light and dark themes, phones and tablets, and no tracking: progress is kept only in the browser."],
+        ],
+        tech: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Vitest", "Playwright"],
+        links: [
+            { label: "Start learning", href: "https://araminix.github.io/gridlingo/", primary: true, icon: "arrow-up-right" },
+            { label: "Source", href: "https://github.com/araminix/gridlingo", icon: "github" },
+        ],
+        repo: "araminix/gridlingo",
+        version: "0.1.0",
+        media: "gridlingo",
     },
     {
         id: "platform",
@@ -92,7 +114,7 @@ export const products = [
 export const capabilities = [
     ["radio-tower", "Real-time systems", "Multiplexed WebSocket protocols, actor runtimes and streaming pipelines that keep their promises under load and across network drops."],
     ["server", "Resilient backends", "Worker isolation, backpressure, timeouts and typed results instead of exceptions, in Node.js, Go and .NET."],
-    ["zap", "Software for energy", "Single-line diagrams, DWG/DXF processing and GIS placement for solar, wind, storage, hydro and grid projects."],
+    ["zap", "Software for energy", "Single-line diagrams, DWG/DXF processing and GIS placement for solar, wind, storage, hydro and grid projects, and the device protocols of the grid explained byte by byte."],
     ["shield-check", "Security by design", "Hardened sessions and uploads, content security policies, audits and their fixes, shipped as part of the work, not after it."],
     ["code-xml", "The modern web platform", "WebAssembly, canvas and SVG rendering at scale, right-to-left languages, and privacy by default."],
     ["test-tube-diagonal", "Quality you can measure", "Tests at every level, CI limits on time, memory and size, and documentation written as part of the product."],
@@ -191,7 +213,7 @@ export const founder = {
     role: "Founder · Lead backend architect",
     text: [
         "Araminix is Amin Abbasi's own organisation, owned by the same GitHub account as every repository on this page: the runtimes, protocols and tools Amin wanted to build on, published, tested and documented.",
-        "Amin is a lead backend architect with more than ten years in Node.js, distributed systems and real-time pipelines, across manufacturing, energy, trading, healthcare and social platforms. A surveying engineer by training, at home with coordinates, maps and CAD, which plantline puts to work.",
+        "Amin is a lead backend architect with more than ten years in Node.js, distributed systems and real-time pipelines, across manufacturing, energy, trading, healthcare and social platforms. A surveying engineer by training, at home with coordinates, maps and CAD, which plantline puts to work, and years in energy software, which Gridlingo shares.",
     ],
     numbers: [
         ["10+", "years building backends"],

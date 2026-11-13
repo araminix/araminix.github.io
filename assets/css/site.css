@@ -222,7 +222,7 @@ h1 { font-size: clamp(44px, 6.4vw, 80px); font-weight: 800; letter-spacing: -0.0
     .product.flip .product-text { order: 0; }
 }
 
-/* plantline's pictures: the diagram in front, the map behind, the phone on top */
+/* A web app's pictures (plantline, Gridlingo): the main view in front, another behind, the phone on top */
 .shots { position: relative; aspect-ratio: 1.2; }
 .frame { position: absolute; margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--card); box-shadow: var(--shadow-lg); }
 .frame img { display: block; width: 100%; }
